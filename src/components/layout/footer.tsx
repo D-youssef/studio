@@ -17,8 +17,9 @@ export function Footer() {
   const { t } = useApp();
 
   return (
-    <footer className="bg-card border-t">
-      <div className="container py-12 px-4 md:px-6">
+    <footer className="bg-card border-t relative overflow-hidden">
+      <div className="absolute inset-0 w-full h-full bg-gradient-animation z-0"></div>
+      <div className="container relative z-10 py-12 px-4 md:px-6">
         <div className="grid gap-8 sm:grid-cols-2 md:grid-cols-4">
           <div className="space-y-4">
             <Logo />
