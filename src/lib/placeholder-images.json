@@ -1,3 +1,46 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "1",
+      "description": "Abstract network of glowing blue nodes representing limitless possibilities.",
+      "imageUrl": "https://images.unsplash.com/photo-1738082956220-a1f20a8632ce?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxhYnN0cmFjdCUyMG5ldHdvcmt8ZW58MHx8fHwxNzYxNDIwMzcwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "abstract network"
+    },
+    {
+      "id": "2",
+      "description": "A modern school hallway with students and lockers.",
+      "imageUrl": "https://images.unsplash.com/photo-1693600411508-d7e9a9fef63a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8c2Nob29sJTIwaGFsbHdheXxlbnwwfHx8fDE3NjE0NjcwMDV8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "school hallway"
+    },
+    {
+      "id": "3",
+      "description": "A parent helping their child with homework.",
+      "imageUrl": "https://images.unsplash.com/photo-1531984929664-2fb2be468d3e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxwYXJlbnQlMjBjaGlsZHxlbnwwfHx8fDE3NjE0MjY5NDN8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "parent child"
+    },
+    {
+      "id": "4",
+      "description": "A modern and clean dentist's office.",
+      "imageUrl": "https://images.unsplash.com/photo-1629909613654-28e377c37b09?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxkZW50aXN0JTIwb2ZmaWNlfGVufDB8fHx8MTc2MTQ3MzcwNXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "dentist office"
+    },
+    {
+      "id": "5",
+      "description": "A diverse team collaborating in a modern office.",
+      "imageUrl": "https://images.unsplash.com/photo-1531545514256-b1400bc00f31?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHx0ZWFtJTIwY29sbGFib3JhdGlvbnxlbnwwfHx8fDE3NjEzOTc1Nzl8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "team collaboration"
+    },
+    {
+      "id": "6",
+      "description": "A futuristic blueprint illustration.",
+      "imageUrl": "https://images.unsplash.com/photo-1721244654346-9be0c0129e36?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxmdXR1cmUlMjBibHVlcHJpbnR8ZW58MHx8fHwxNzYxNDczMzcwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "future blueprint"
+    },
+    {
+      "id": "7",
+      "description": "A secure digital lock interface.",
+      "imageUrl": "https://images.unsplash.com/photo-1651235732694-0d057ace2f30?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxzZWN1cmUlMjBsb2dpbnxlbnwwfHx8fDE3NjE0NjcwMzh8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "secure login"
+    }
+  ]
 }
