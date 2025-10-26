@@ -9,9 +9,7 @@ const nextConfig: NextConfig = {
     ignoreDuringBuilds: true,
   },
   experimental: {
-    allowedDevOrigins: [
-      'https://6000-firebase-studio-1761472405695.cluster-fbfjltn375c6wqxlhoehbz44sk.cloudworkstations.dev',
-    ],
+    appDir: true,
   },
   images: {
     remotePatterns: [
