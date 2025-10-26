@@ -80,6 +80,7 @@ const InfinityHeroAnimation = () => (
 export default function Home() {
   const { t } = useApp();
   const productsBgImage = PlaceHolderImages.find(img => img.id === '8');
+  const missionBgImage = PlaceHolderImages.find(img => img.id === '1');
 
   return (
     <div className="flex flex-col">
@@ -164,8 +165,18 @@ export default function Home() {
         </div>
       </section>
       
-      <section id="mission" className="py-20 md:py-28 bg-card">
-        <div className="container mx-auto px-4 md:px-6">
+      <section id="mission" className="py-20 md:py-28 relative">
+         {missionBgImage && (
+          <Image
+            src={missionBgImage.imageUrl}
+            alt={missionBgImage.description}
+            fill
+            className="object-cover"
+            data-ai-hint={missionBgImage.imageHint}
+          />
+        )}
+        <div className="absolute inset-0 bg-card/90"></div>
+        <div className="container mx-auto px-4 md:px-6 relative">
           <div className="grid md:grid-cols-2 gap-16 items-center">
             <AnimatedOnScroll animationName="animate__fadeInLeft">
               <div className="space-y-8">
