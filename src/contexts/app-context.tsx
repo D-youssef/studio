@@ -24,19 +24,25 @@ interface AppContextType {
 export const AppContext = createContext<AppContextType | undefined>(undefined);
 
 export function AppProvider({ children }: { children: ReactNode }) {
-  const [theme, setThemeState] = useState<Theme>(() => {
-    if (typeof window === 'undefined') return 'system';
-    return (localStorage.getItem('infynia-theme') as Theme | null) || 'system';
-  });
-  const [language, setLanguageState] = useState<Language>(() => {
-    if (typeof window === 'undefined') return 'en';
-    return (localStorage.getItem('infynia-language') as Language | null) || 'en';
-  });
-  const [currency, setCurrencyState] = useState<Currency>(() => {
-    if (typeof window === 'undefined') return 'USD';
-    return (localStorage.getItem('infynia-currency') as Currency | null) || 'USD';
-  });
-  
+  const [theme, setTheme] = useState<Theme>('system');
+  const [language, setLanguage] = useState<Language>('en');
+  const [currency, setCurrency] = useState<Currency>('USD');
+
+  useEffect(() => {
+    const storedTheme = localStorage.getItem('infynia-theme') as Theme | null;
+    if (storedTheme) {
+      setTheme(storedTheme);
+    }
+    const storedLanguage = localStorage.getItem('infynia-language') as Language | null;
+    if (storedLanguage) {
+      setLanguage(storedLanguage);
+    }
+    const storedCurrency = localStorage.getItem('infynia-currency') as Currency | null;
+    if (storedCurrency) {
+      setCurrency(storedCurrency);
+    }
+  }, []);
+
   useEffect(() => {
     const root = window.document.documentElement;
     root.classList.remove('light', 'dark');
@@ -59,10 +65,6 @@ export function AppProvider({ children }: { children: ReactNode }) {
   useEffect(() => {
     localStorage.setItem('infynia-currency', currency);
   }, [currency]);
-
-  const setTheme = (t: Theme) => setThemeState(t);
-  const setLanguage = (lang: Language) => setLanguageState(lang);
-  const setCurrency = (curr: Currency) => setCurrencyState(curr);
 
   const t = useCallback((key: string): string => {
     const keys = key.split('.');
@@ -89,7 +91,7 @@ export function AppProvider({ children }: { children: ReactNode }) {
     currency,
     setCurrency,
     t
-  }), [theme, language, currency, t, setTheme, setLanguage, setCurrency]);
+  }), [theme, language, currency, t]);
 
   return <AppContext.Provider value={value}>{children}</AppContext.Provider>;
 }
