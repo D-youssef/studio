@@ -31,7 +31,7 @@
   "home": {
     "hero": {
       "title": "Infynia : Des possibilités infinies, <span class=\"block text-primary\">intelligemment livrées.</span>",
-      "subtitle": "Des solutions modernes, multilingues et conviviales conçues pour évoluer avec vos ambitions. De l'administration scolaire à la gestion de cabinet, Infynia est votre partenaire de croissance.",
+      "subtitle": "Chez Infynia, nous pensons que l'automatisation doit être simple. Nous concevons des systèmes intelligents qui prennent en charge les tâches répétitives et chronophages qui vous freinent, afin que vous puissiez vous concentrer sur ce qui compte vraiment : créer, innover et grandir.    Nos solutions basées sur l'IA rationalisent les flux de travail, connectent vos outils et débloquent de nouveaux niveaux d'efficacité. Que vous soyez entrepreneur, petite entreprise ou esprit créatif, Infynia vous permet de faire plus avec moins d'effort.    Avec Infynia, l'automatisation ne consiste pas seulement à gagner du temps, mais à ouvrir les portes à des possibilités infinies.",
       "getStarted": "Commencer",
       "seePricing": "Voir les tarifs"
     },
@@ -238,3 +238,5 @@
     "button": "Accéder à la connexion sécurisée"
   }
 }
+
+    
