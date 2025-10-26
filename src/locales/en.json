@@ -193,33 +193,33 @@
     }
   },
   "about": {
-    "title": "About Infynia",
-    "subtitle": "We are a team of innovators dedicated to building intelligent, user-centric software for a global audience.",
+    "title": "We are the Architects of Intelligent Automation",
+    "subtitle": "We build the digital workforce that powers your business, connecting your apps and automating workflows so you can focus on what's next.",
     "mission": {
       "title": "Our Mission",
-      "text": "To empower organizations with scalable, intuitive, and multilingual digital tools that streamline complex processes and foster growth. We believe that technology should be an accessible asset, enabling our clients to focus on what they do best."
+      "text": "To empower businesses of all sizes by building robust AI-driven automation engines. We handle the complex, repetitive tasks that slow you down, transforming fragmented processes into seamless, intelligent workflows."
     },
     "vision": {
       "title": "Our Vision",
-      "text": "To be a global leader in specialized software solutions, known for our commitment to innovation, quality, and customer success. We envision a future where our products create limitless possibilities for businesses and institutions worldwide."
+      "text": "To create a world where every business can leverage the power of automation. We envision a future where your digital systems work in perfect harmony, orchestrated by intelligent agents that anticipate your needs and drive growth autonomously."
     },
     "values": {
-      "title": "Our Values",
-      "customerCentric": {
-        "title": "Customer-Centric",
-        "text": "We succeed when our customers succeed."
+      "title": "Our Core Principles",
+      "intelligence": {
+        "title": "Intelligence",
+        "text": "We go beyond simple automation, embedding AI to create workflows that learn, adapt, and make smart decisions."
       },
-      "innovation": {
-        "title": "Innovation",
-        "text": "We continuously explore new technologies to solve old problems."
+      "efficiency": {
+        "title": "Efficiency",
+        "text": "Our goal is to eliminate bottlenecks and give you back your most valuable asset: time."
       },
-      "integrity": {
-        "title": "Integrity",
-        "text": "We build trust through transparency and quality."
+      "reliability": {
+        "title": "Reliability",
+        "text": "We build robust, secure, and dependable automation that you can count on, day and night."
       },
-      "globalMindset": {
-        "title": "Global-Mindset",
-        "text": "We design for a diverse, interconnected world."
+      "scalability": {
+        "title": "Scalability",
+        "text": "Our solutions are designed to grow with you, from your first automated task to a fully integrated digital workforce."
       }
     }
   },

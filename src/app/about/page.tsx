@@ -4,6 +4,7 @@ import { PlaceHolderImages } from "@/lib/placeholder-images";
 import Image from "next/image";
 import { useApp } from "@/hooks/use-app";
 import { AnimatedOnScroll } from "@/components/shared/animated-on-scroll";
+import { BrainCircuit, Zap, Globe, ShieldCheck } from "lucide-react";
 
 export default function AboutPage() {
   const teamImage = PlaceHolderImages.find(img => img.id === '5');
@@ -37,15 +38,6 @@ export default function AboutPage() {
                     {t('about.vision.text')}
                   </p>
                 </div>
-                <div>
-                  <h2 className="text-3xl font-headline font-bold text-primary mb-4">{t('about.values.title')}</h2>
-                  <ul className="list-disc list-inside text-muted-foreground space-y-2">
-                    <li><span className="font-semibold text-foreground">{t('about.values.customerCentric.title')}:</span> {t('about.values.customerCentric.text')}</li>
-                    <li><span className="font-semibold text-foreground">{t('about.values.innovation.title')}:</span> {t('about.values.innovation.text')}</li>
-                    <li><span className="font-semibold text-foreground">{t('about.values.integrity.title')}:</span> {t('about.values.integrity.text')}</li>
-                    <li><span className="font-semibold text-foreground">{t('about.values.globalMindset.title')}:</span> {t('about.values.globalMindset.text')}</li>
-                  </ul>
-                </div>
               </div>
             </AnimatedOnScroll>
             <AnimatedOnScroll animationName="animate__fadeInRight">
@@ -62,6 +54,42 @@ export default function AboutPage() {
               </div>
             </AnimatedOnScroll>
           </div>
+          
+          <AnimatedOnScroll animationName="animate__fadeInUp" className="mt-20">
+             <div className="text-center space-y-4 my-16">
+              <h2 className="text-3xl md:text-4xl font-headline font-bold">{t('about.values.title')}</h2>
+            </div>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+              <div className="text-center p-4">
+                <div className="flex justify-center mb-4">
+                  <div className="bg-primary/10 p-4 rounded-full"><BrainCircuit className="w-8 h-8 text-primary" /></div>
+                </div>
+                <h3 className="text-xl font-headline font-bold mb-2">{t('about.values.intelligence.title')}</h3>
+                <p className="text-muted-foreground">{t('about.values.intelligence.text')}</p>
+              </div>
+              <div className="text-center p-4">
+                <div className="flex justify-center mb-4">
+                  <div className="bg-primary/10 p-4 rounded-full"><Zap className="w-8 h-8 text-primary" /></div>
+                </div>
+                <h3 className="text-xl font-headline font-bold mb-2">{t('about.values.efficiency.title')}</h3>
+                <p className="text-muted-foreground">{t('about.values.efficiency.text')}</p>
+              </div>
+              <div className="text-center p-4">
+                <div className="flex justify-center mb-4">
+                  <div className="bg-primary/10 p-4 rounded-full"><ShieldCheck className="w-8 h-8 text-primary" /></div>
+                </div>
+                <h3 className="text-xl font-headline font-bold mb-2">{t('about.values.reliability.title')}</h3>
+                <p className="text-muted-foreground">{t('about.values.reliability.text')}</p>
+              </div>
+              <div className="text-center p-4">
+                <div className="flex justify-center mb-4">
+                  <div className="bg-primary/10 p-4 rounded-full"><Globe className="w-8 h-8 text-primary" /></div>
+                </div>
+                <h3 className="text-xl font-headline font-bold mb-2">{t('about.values.scalability.title')}</h3>
+                <p className="text-muted-foreground">{t('about.values.scalability.text')}</p>
+              </div>
+            </div>
+          </AnimatedOnScroll>
         </div>
       </div>
     </AnimatedOnScroll>

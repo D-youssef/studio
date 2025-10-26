@@ -193,33 +193,33 @@
     }
   },
   "about": {
-    "title": "À propos d'Infynia",
-    "subtitle": "Nous sommes une équipe d'innovateurs dédiés à la création de logiciels intelligents et centrés sur l'utilisateur pour un public mondial.",
+    "title": "Nous Sommes les Architectes de l'Automatisation Intelligente",
+    "subtitle": "Nous construisons la main-d'œuvre numérique qui alimente votre entreprise, en connectant vos applications et en automatisant les flux de travail pour que vous puissiez vous concentrer sur l'avenir.",
     "mission": {
       "title": "Notre Mission",
-      "text": "Donner aux organisations des outils numériques évolutifs, intuitifs et multilingues qui rationalisent les processus complexes et favorisent la croissance. Nous pensons que la technologie doit être un atout accessible, permettant à nos clients de se concentrer sur ce qu'ils font le mieux."
+      "text": "Donner aux entreprises de toutes tailles les moyens de créer des moteurs d'automatisation robustes basés sur l'IA. Nous prenons en charge les tâches complexes et répétitives qui vous ralentissent, transformant les processus fragmentés en flux de travail transparents et intelligents."
     },
     "vision": {
       "title": "Notre Vision",
-      "text": "Être un leader mondial des solutions logicielles spécialisées, reconnu pour notre engagement envers l'innovation, la qualité et la réussite de nos clients. Nous envisageons un avenir où nos produits créeront des possibilités illimitées pour les entreprises et les institutions du monde entier."
+      "text": "Créer un monde où chaque entreprise peut exploiter la puissance de l'automatisation. Nous envisageons un avenir où vos systèmes numériques fonctionnent en parfaite harmonie, orchestrés par des agents intelligents qui anticipent vos besoins et stimulent la croissance de manière autonome."
     },
     "values": {
-      "title": "Nos Valeurs",
-      "customerCentric": {
-        "title": "Centré sur le client",
-        "text": "Nous réussissons lorsque nos clients réussissent."
+      "title": "Nos Principes Fondamentaux",
+      "intelligence": {
+        "title": "Intelligence",
+        "text": "Nous allons au-delà de la simple automatisation, en intégrant l'IA pour créer des flux de travail qui apprennent, s'adaptent et prennent des décisions intelligentes."
       },
-      "innovation": {
-        "title": "Innovation",
-        "text": "Nous explorons continuellement de nouvelles technologies pour résoudre d'anciens problèmes."
+      "efficiency": {
+        "title": "Efficacité",
+        "text": "Notre objectif est d'éliminer les goulots d'étranglement et de vous redonner votre atout le plus précieux : le temps."
       },
-      "integrity": {
-        "title": "Intégrité",
-        "text": "Nous bâtissons la confiance par la transparence et la qualité."
+      "reliability": {
+        "title": "Fiabilité",
+        "text": "Nous construisons des automatisations robustes, sécurisées et fiables sur lesquelles vous pouvez compter, de jour comme de nuit."
       },
-      "globalMindset": {
-        "title": "Mentalité globale",
-        "text": "Nous concevons pour un monde diversifié et interconnecté."
+      "scalability": {
+        "title": "Évolutivité",
+        "text": "Nos solutions sont conçues pour évoluer avec vous, de votre première tâche automatisée à une main-d'œuvre numérique entièrement intégrée."
       }
     }
   },
