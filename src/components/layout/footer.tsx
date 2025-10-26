@@ -1,7 +1,7 @@
 import { Logo } from "@/components/logo";
 import { NAV_LINKS } from "@/lib/constants";
 import Link from "next/link";
-import { FaWhatsapp, FaTelegramPlane } from "react-icons/fa";
+import { FaWhatsapp } from "react-icons/fa";
 
 const SocialIcon = ({ href, children }: { href: string; children: React.ReactNode }) => (
   <a href={href} target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary">
@@ -40,10 +40,6 @@ export function Footer() {
           <div className="space-y-2">
             <h4 className="font-semibold font-headline">Connect With Us</h4>
             <div className="flex space-x-4">
-              <SocialIcon href="https://t.me/yourtelegramchannel">
-                <FaTelegramPlane size={24} />
-                <span className="sr-only">Telegram</span>
-              </SocialIcon>
               <SocialIcon href="https://wa.me/212680546540">
                  <FaWhatsapp size={24} />
                  <span className="sr-only">WhatsApp</span>
