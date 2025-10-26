@@ -32,7 +32,7 @@ export default function PortalPage() {
                         You are being redirected to our secure parent portal. Please use your provided credentials to log in.
                     </p>
                     <Button size="lg" asChild>
-                        <Link href="#">
+                        <Link href="https://example.com/login" target="_blank" rel="noopener noreferrer">
                             Proceed to Secure Login
                             <ExternalLink className="ml-2 h-4 w-4" />
                         </Link>
