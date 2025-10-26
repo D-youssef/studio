@@ -1,3 +1,4 @@
+
 "use client";
 
 import Link from "next/link";
@@ -64,9 +65,6 @@ export function Header() {
           <div className="flex items-center">
             <LanguageSwitcher />
             <ThemeToggle />
-            <Button asChild className="ml-2 hidden lg:inline-flex">
-              <Link href="/portal">{t('header.portalLogin')}</Link>
-            </Button>
           </div>
         </div>
       </div>
