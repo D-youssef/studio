@@ -30,19 +30,14 @@ export function AppProvider({ children }: { children: ReactNode }) {
 
   useEffect(() => {
     setIsMounted(true);
+    const storedTheme = localStorage.getItem('infynia-theme') as Theme | null;
+    const storedLanguage = localStorage.getItem('infynia-language') as Language | null;
+    const storedCurrency = localStorage.getItem('infynia-currency') as Currency | null;
+
+    if (storedTheme) setThemeState(storedTheme);
+    if (storedLanguage) setLanguageState(storedLanguage);
+    if (storedCurrency) setCurrencyState(storedCurrency);
   }, []);
-
-  useEffect(() => {
-    if (isMounted) {
-      const storedTheme = localStorage.getItem('infynia-theme') as Theme | null;
-      const storedLanguage = localStorage.getItem('infynia-language') as Language | null;
-      const storedCurrency = localStorage.getItem('infynia-currency') as Currency | null;
-
-      if (storedTheme) setThemeState(storedTheme);
-      if (storedLanguage) setLanguageState(storedLanguage);
-      if (storedCurrency) setCurrencyState(storedCurrency);
-    }
-  }, [isMounted]);
 
   useEffect(() => {
     if (isMounted) {
@@ -107,11 +102,7 @@ export function AppProvider({ children }: { children: ReactNode }) {
     currency,
     setCurrency,
     t
-  }), [theme, language, currency, t]);
-
-  if (!isMounted) {
-    return null;
-  }
+  }), [theme, setTheme, language, setLanguage, currency, setCurrency, t]);
 
   return <AppContext.Provider value={value}>{children}</AppContext.Provider>;
 }
