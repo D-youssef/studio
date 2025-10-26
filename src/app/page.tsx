@@ -69,10 +69,13 @@ export default function Home() {
             <AnimatedOnScroll animationName="animate__fadeInLeft">
               <div className="space-y-6 text-center md:text-left">
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-headline font-bold tracking-tighter">
-                  <span className="animate-text-shimmer bg-[linear-gradient(110deg,#334155,45%,#93c5fd,55%,#334155)] bg-[length:250%_100%] bg-clip-text text-transparent flex items-center justify-center md:justify-start">
-                     <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mr-2"><path d="M12 12c-2-2.67-4-4-6-4a4 4 0 1 0 0 8c2 0 4-1.33 6-4zm0 0c2 2.67 4 4 6 4a4 4 0 1 0 0-8c-2 0-4 1.33-6 4z" /></svg>
-                    Infynia
-                  </span>{t('home.hero.title.part1')}<span className="block text-primary">{t('home.hero.title.part2')}</span>
+                  <div className="flex items-center justify-center md:justify-start">
+                     <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mr-2 text-primary"><path d="M12 12c-2-2.67-4-4-6-4a4 4 0 1 0 0 8c2 0 4-1.33 6-4zm0 0c2 2.67 4 4 6 4a4 4 0 1 0 0-8c-2 0-4 1.33-6 4z" /></svg>
+                    <span className="animate-text-shimmer bg-[linear-gradient(110deg,#334155,45%,#93c5fd,55%,#334155)] bg-[length:250%_100%] bg-clip-text text-transparent">
+                      Infynia
+                    </span>
+                  </div>
+                  {t('home.hero.title.part1')}<span className="block text-primary">{t('home.hero.title.part2')}</span>
                 </h1>
                 <p className="max-w-xl mx-auto md:mx-0 text-muted-foreground md:text-xl">
                   {t('home.hero.subtitle')}
@@ -171,3 +174,5 @@ export default function Home() {
     </div>
   );
 }
+
+    
