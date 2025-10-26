@@ -75,33 +75,33 @@ export const PRICING_PLANS = {
   },
 };
 
+export const FAQ_DATA = [
+  {
+    question: "What is Infynia?",
+    answer: "Infynia is an AI-powered automation agency that helps individuals and businesses streamline their workflows. We design smart systems that take care of repetitive tasks, so you can focus on creating, innovating, and growing."
+  },
+  {
+    question: "What does Infynia do?",
+    answer: "We build custom automation solutions that connect your tools, organize your processes, and reduce manual work. Whether it’s managing data, handling communication, or simplifying operations, Infynia makes your workflow run smoothly in the background."
+  },
+  {
+    question: "Who can benefit from Infynia?",
+    answer: "- Entrepreneurs who want to save time and scale their projects\n- Small businesses looking to boost efficiency without hiring extra staff\n- Creators & freelancers who want to focus on their craft instead of admin work\n- Teams that need better collaboration and less repetitive busywork"
+  },
+  {
+    question: "How does Infynia help me “make something great”?",
+    answer: "By removing the friction of repetitive tasks, Infynia frees up your energy for what really matters — building, innovating, and achieving your goals. We believe automation isn’t just about efficiency; it’s about unlocking your potential."
+  },
+  {
+    question: "Do I need technical skills to use Infynia?",
+    answer: "Not at all. We handle the technical setup and design everything to be user-friendly. You’ll simply enjoy the benefits of a system that works for you, not the other way around."
+  },
+  {
+    question: "Why choose Infynia?",
+    answer: "- Tailored automation built around your needs\n- AI-driven solutions that adapt and scale with you\n- More time, less stress, and greater impact"
+  }
+];
+
 export const FAQ_CATEGORIES = {
-  General: [
-    {
-      question: "What is Infynia?",
-      answer: "Infynia specializes in creating modern, multilingual, and user-friendly software solutions. Our goal is to provide scalable tools that enhance efficiency and communication for various sectors, including education and healthcare.",
-    },
-    {
-      question: "Are your products customizable?",
-      answer: "Yes, absolutely. We understand that each organization has unique needs. All our products are designed to be highly customizable to fit your specific workflow and requirements.",
-    },
-  ],
-  Inscription: [
-    {
-      question: "How does the Inscription & FAQ system work?",
-      answer: "Our system provides a digital platform for schools to manage student registrations. Parents can fill out forms, upload documents, and make payments online. The integrated FAQ uses AI to answer common questions, reducing the burden on administrative staff.",
-    },
-  ],
-  "Parent Portal": [
-    {
-      question: "What information can I access in the Parent Portal?",
-      answer: "The Parent Portal provides a secure, centralized location to view your child's academic progress, including attendance records, grades, teacher notes, and upcoming assignments. You can also receive important announcements from the school.",
-    },
-  ],
-  Dentist: [
-    {
-      question: "Does the Dentist Booking system sync with my existing calendar?",
-      answer: "Yes, our booking system offers seamless two-way integration with Google Calendar. This ensures your availability is always up-to-date and helps prevent double bookings.",
-    },
-  ],
+  General: FAQ_DATA
 };
