@@ -10,7 +10,6 @@ import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { ThemeToggle } from "@/components/shared/theme-toggle";
 import { LanguageSwitcher } from "@/components/shared/language-switcher";
-import { CurrencySwitcher } from "@/components/shared/currency-switcher";
 import { useApp } from "@/hooks/use-app";
 
 export function Header() {
@@ -63,7 +62,6 @@ export function Header() {
             </nav>
           </div>
           <div className="flex items-center">
-            <CurrencySwitcher />
             <LanguageSwitcher />
             <ThemeToggle />
             <Button asChild className="ml-2 hidden lg:inline-flex">

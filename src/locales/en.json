@@ -31,7 +31,7 @@
   "home": {
     "hero": {
       "title": {
-        "part1": "Limitless Possibilities,",
+        "part1": "Limitless Possibilities",
         "part2": "Intelligently Delivered."
       },
       "subtitle": "We create smart automations that handle the busywork, so you can focus on building, innovating, and growing. Infynia streamlines your workflow, connects your tools, and unlocks more time for what truly matters.",
@@ -116,7 +116,7 @@
   },
   "pricing": {
     "title": "Flexible Pricing for Every Need",
-    "subtitle": "Choose the plan that's right for you. All prices are shown in",
+    "subtitle": "Choose the plan that's right for you. Select your preferred currency.",
     "bestValue": "Best Value",
     "oneTimeSetup": "one-time setup",
     "perYear": "per year",

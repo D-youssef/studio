@@ -31,7 +31,7 @@
   "home": {
     "hero": {
       "title": {
-        "part1": "Des possibilités infinies,",
+        "part1": "Des possibilités infinies",
         "part2": "intelligemment livrées."
       },
       "subtitle": "Nous créons des automatisations intelligentes qui s'occupent des tâches fastidieuses, afin que vous puissiez vous concentrer sur la construction, l'innovation et la croissance. Infynia rationalise votre flux de travail, connecte vos outils et libère plus de temps pour ce qui compte vraiment.",
@@ -116,7 +116,7 @@
   },
   "pricing": {
     "title": "Des tarifs flexibles pour tous les besoins",
-    "subtitle": "Choisissez le plan qui vous convient. Tous les prix sont affichés en",
+    "subtitle": "Choisissez le plan qui vous convient. Sélectionnez votre devise préférée.",
     "bestValue": "Meilleur rapport qualité-prix",
     "oneTimeSetup": "frais d'installation uniques",
     "perYear": "par an",

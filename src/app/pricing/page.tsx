@@ -8,6 +8,7 @@ import { Check } from "lucide-react";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 import { useEffect, useState } from "react";
+import { CurrencySelector } from "@/components/shared/currency-selector";
 
 const currencySymbols = {
   USD: "$",
@@ -47,8 +48,11 @@ export default function PricingPage() {
         <div className="text-center space-y-4 mb-16">
           <h1 className="text-4xl md:text-5xl font-headline font-bold">{t('pricing.title')}</h1>
           <p className="max-w-3xl mx-auto text-muted-foreground md:text-xl">
-            {t('pricing.subtitle')} {currency}.
+            {t('pricing.subtitle')}
           </p>
+          <div className="flex justify-center pt-4">
+            <CurrencySelector />
+          </div>
         </div>
 
         <div className="grid lg:grid-cols-2 xl:grid-cols-4 gap-8 items-stretch">
