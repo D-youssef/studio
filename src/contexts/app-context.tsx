@@ -24,63 +24,45 @@ interface AppContextType {
 export const AppContext = createContext<AppContextType | undefined>(undefined);
 
 export function AppProvider({ children }: { children: ReactNode }) {
-  const [theme, setThemeState] = useState<Theme>('system');
-  const [language, setLanguageState] = useState<Language>('en');
-  const [currency, setCurrencyState] = useState<Currency>('USD');
-  const [isMounted, setIsMounted] = useState(false);
-
-  useEffect(() => {
-    setIsMounted(true);
-    const storedTheme = localStorage.getItem('infynia-theme') as Theme | null;
-    const storedLanguage = localStorage.getItem('infynia-language') as Language | null;
-    const storedCurrency = localStorage.getItem('infynia-currency') as Currency | null;
-
-    if (storedTheme) setThemeState(storedTheme);
-    if (storedLanguage) setLanguageState(storedLanguage);
-    if (storedCurrency) setCurrencyState(storedCurrency);
-  }, []);
-
-  const setTheme = (t: Theme) => {
-    setThemeState(t);
-    if (isMounted) {
-      localStorage.setItem('infynia-theme', t);
-    }
-  };
-
-  const setLanguage = (lang: Language) => {
-    setLanguageState(lang);
-     if (isMounted) {
-      localStorage.setItem('infynia-language', lang);
-    }
-  };
+  const [theme, setThemeState] = useState<Theme>(() => {
+    if (typeof window === 'undefined') return 'system';
+    return (localStorage.getItem('infynia-theme') as Theme | null) || 'system';
+  });
+  const [language, setLanguageState] = useState<Language>(() => {
+    if (typeof window === 'undefined') return 'en';
+    return (localStorage.getItem('infynia-language') as Language | null) || 'en';
+  });
+  const [currency, setCurrencyState] = useState<Currency>(() => {
+    if (typeof window === 'undefined') return 'USD';
+    return (localStorage.getItem('infynia-currency') as Currency | null) || 'USD';
+  });
   
-  const setCurrency = (curr: Currency) => {
-    setCurrencyState(curr);
-    if (isMounted) {
-      localStorage.setItem('infynia-currency', curr);
+  useEffect(() => {
+    const root = window.document.documentElement;
+    root.classList.remove('light', 'dark');
+
+    let effectiveTheme = theme;
+    if (theme === 'system') {
+      effectiveTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
     }
-  };
+    
+    root.classList.add(effectiveTheme);
+    localStorage.setItem('infynia-theme', theme);
+  }, [theme]);
 
   useEffect(() => {
-    if (isMounted) {
-      document.documentElement.lang = language;
-      document.documentElement.dir = language === 'ar' ? 'rtl' : 'ltr';
-    }
-  }, [language, isMounted]);
+    document.documentElement.lang = language;
+    document.documentElement.dir = language === 'ar' ? 'rtl' : 'ltr';
+    localStorage.setItem('infynia-language', language);
+  }, [language]);
 
   useEffect(() => {
-    if (isMounted) {
-      const root = window.document.documentElement;
-      root.classList.remove('light', 'dark');
+    localStorage.setItem('infynia-currency', currency);
+  }, [currency]);
 
-      let effectiveTheme = theme;
-      if (theme === 'system') {
-        effectiveTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-      }
-      
-      root.classList.add(effectiveTheme);
-    }
-  }, [theme, isMounted]);
+  const setTheme = (t: Theme) => setThemeState(t);
+  const setLanguage = (lang: Language) => setLanguageState(lang);
+  const setCurrency = (curr: Currency) => setCurrencyState(curr);
 
   const t = useCallback((key: string): string => {
     const keys = key.split('.');
@@ -107,11 +89,7 @@ export function AppProvider({ children }: { children: ReactNode }) {
     currency,
     setCurrency,
     t
-  }), [theme, language, currency, t]);
-
-  if (!isMounted) {
-    return null;
-  }
+  }), [theme, language, currency, t, setTheme, setLanguage, setCurrency]);
 
   return <AppContext.Provider value={value}>{children}</AppContext.Provider>;
 }
