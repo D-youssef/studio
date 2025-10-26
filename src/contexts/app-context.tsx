@@ -24,46 +24,55 @@ export function AppProvider({ children }: { children: ReactNode }) {
 
   useEffect(() => {
     setIsMounted(true);
-    const storedTheme = localStorage.getItem('infynia-theme') as Theme | null;
-    const storedLanguage = localStorage.getItem('infynia-language') as Language | null;
-    const storedCurrency = localStorage.getItem('infynia-currency') as Currency | null;
-
-    if (storedTheme) setThemeState(storedTheme);
-    if (storedLanguage) setLanguageState(storedLanguage);
-    if (storedCurrency) setCurrencyState(storedCurrency);
   }, []);
 
   useEffect(() => {
-    if (!isMounted) return;
-    
-    const root = window.document.documentElement;
-    root.classList.remove('light', 'dark');
+    if (isMounted) {
+      const storedTheme = localStorage.getItem('infynia-theme') as Theme | null;
+      const storedLanguage = localStorage.getItem('infynia-language') as Language | null;
+      const storedCurrency = localStorage.getItem('infynia-currency') as Currency | null;
 
-    let effectiveTheme = theme;
-    if (theme === 'system') {
-      effectiveTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      if (storedTheme) setThemeState(storedTheme);
+      if (storedLanguage) setLanguageState(storedLanguage);
+      if (storedCurrency) setCurrencyState(storedCurrency);
     }
-    
-    root.classList.add(effectiveTheme);
-    localStorage.setItem('infynia-theme', theme);
+  }, [isMounted]);
+
+  useEffect(() => {
+    if (isMounted) {
+      const root = window.document.documentElement;
+      root.classList.remove('light', 'dark');
+
+      let effectiveTheme = theme;
+      if (theme === 'system') {
+        effectiveTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      }
+      
+      root.classList.add(effectiveTheme);
+      localStorage.setItem('infynia-theme', theme);
+    }
   }, [theme, isMounted]);
+  
+  useEffect(() => {
+    if(isMounted) {
+      document.documentElement.lang = language;
+      document.documentElement.dir = language === 'ar' ? 'rtl' : 'ltr';
+      localStorage.setItem('infynia-language', language);
+    }
+  }, [language, isMounted]);
 
   const setLanguage = (lang: Language) => {
-    if (!isMounted) return;
     setLanguageState(lang);
-    localStorage.setItem('infynia-language', lang);
-    document.documentElement.lang = lang;
-    document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
   };
 
   const setCurrency = (curr: Currency) => {
-    if (!isMounted) return;
     setCurrencyState(curr);
-    localStorage.setItem('infynia-currency', curr);
+    if(isMounted) {
+        localStorage.setItem('infynia-currency', curr);
+    }
   };
 
   const setTheme = (t: Theme) => {
-     if (!isMounted) return;
      setThemeState(t);
   }
 
@@ -75,10 +84,6 @@ export function AppProvider({ children }: { children: ReactNode }) {
     currency,
     setCurrency,
   }), [theme, language, currency]);
-  
-  if (!isMounted) {
-    return null;
-  }
 
   return <AppContext.Provider value={value}>{children}</AppContext.Provider>;
 }
