@@ -86,3 +86,13 @@ body {
     @apply bg-background text-foreground;
   }
 }
+
+@layer utilities {
+  .infinity-animation {
+    animation: rotate-infinity 6s linear infinite;
+  }
+  @keyframes rotate-infinity {
+    0% { transform: rotate(0deg);}
+    100% { transform: rotate(360deg);}
+  }
+}

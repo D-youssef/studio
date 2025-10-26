@@ -58,7 +58,24 @@ const coreValues = [
   },
 ];
 
-const heroImage = PlaceHolderImages.find(img => img.id === "1");
+const InfinityHeroAnimation = () => (
+  <div className="relative w-[200px] h-[120px] flex justify-center items-center md:w-[300px] md:h-[180px] lg:w-[400px] lg:h-[240px] mx-auto">
+    <svg width="100%" height="100%" viewBox="0 0 200 120" className="infinity-animation" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M50 60C50 40 65 25 85 25C105 25 120 40 120 60C120 80 105 95 85 95C65 95 50 80 50 60Z" fill="url(#heroGradient1)" opacity="0.8"></path>
+      <path d="M80 60C80 40 95 25 115 25C135 25 150 40 150 60C150 80 135 95 115 95C95 95 80 80 80 60Z" fill="url(#heroGradient2)" opacity="0.6"></path>
+      <defs>
+        <linearGradient id="heroGradient1" x1="50" y1="25" x2="120" y2="95" gradientUnits="userSpaceOnUse">
+          <stop stopColor="hsl(var(--primary))"></stop>
+          <stop offset="1" stopColor="hsl(var(--accent))"></stop>
+        </linearGradient>
+        <linearGradient id="heroGradient2" x1="80" y1="25" x2="150" y2="95" gradientUnits="userSpaceOnUse">
+          <stop stopColor="hsl(var(--accent))"></stop>
+          <stop offset="1" stopColor="hsl(var(--primary))"></stop>
+        </linearGradient>
+      </defs>
+    </svg>
+  </div>
+);
 
 export default function Home() {
   const { t } = useApp();
@@ -92,17 +109,7 @@ export default function Home() {
               </div>
             </AnimatedOnScroll>
             <AnimatedOnScroll animationName="animate__fadeInRight">
-              <div className="relative h-64 md:h-auto md:aspect-video">
-                {heroImage && 
-                  <Image
-                    src={heroImage.imageUrl}
-                    alt={heroImage.description}
-                    fill
-                    className="object-cover rounded-xl shadow-2xl"
-                    data-ai-hint={heroImage.imageHint}
-                  />
-                }
-              </div>
+              <InfinityHeroAnimation />
             </AnimatedOnScroll>
           </div>
         </div>
