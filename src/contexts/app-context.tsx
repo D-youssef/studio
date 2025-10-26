@@ -1,3 +1,4 @@
+
 "use client";
 
 import { createContext, useState, useEffect, useMemo, type ReactNode, useCallback } from 'react';
@@ -39,6 +40,34 @@ export function AppProvider({ children }: { children: ReactNode }) {
     if (storedCurrency) setCurrencyState(storedCurrency);
   }, []);
 
+  const setTheme = (t: Theme) => {
+    setThemeState(t);
+    if (isMounted) {
+      localStorage.setItem('infynia-theme', t);
+    }
+  };
+
+  const setLanguage = (lang: Language) => {
+    setLanguageState(lang);
+     if (isMounted) {
+      localStorage.setItem('infynia-language', lang);
+    }
+  };
+  
+  const setCurrency = (curr: Currency) => {
+    setCurrencyState(curr);
+    if (isMounted) {
+      localStorage.setItem('infynia-currency', curr);
+    }
+  };
+
+  useEffect(() => {
+    if (isMounted) {
+      document.documentElement.lang = language;
+      document.documentElement.dir = language === 'ar' ? 'rtl' : 'ltr';
+    }
+  }, [language, isMounted]);
+
   useEffect(() => {
     if (isMounted) {
       const root = window.document.documentElement;
@@ -50,32 +79,8 @@ export function AppProvider({ children }: { children: ReactNode }) {
       }
       
       root.classList.add(effectiveTheme);
-      localStorage.setItem('infynia-theme', theme);
     }
   }, [theme, isMounted]);
-  
-  useEffect(() => {
-    if(isMounted) {
-      document.documentElement.lang = language;
-      document.documentElement.dir = language === 'ar' ? 'rtl' : 'ltr';
-      localStorage.setItem('infynia-language', language);
-    }
-  }, [language, isMounted]);
-
-  const setLanguage = (lang: Language) => {
-    setLanguageState(lang);
-  };
-
-  const setCurrency = (curr: Currency) => {
-    setCurrencyState(curr);
-    if(isMounted) {
-        localStorage.setItem('infynia-currency', curr);
-    }
-  };
-
-  const setTheme = (t: Theme) => {
-     setThemeState(t);
-  }
 
   const t = useCallback((key: string): string => {
     const keys = key.split('.');
@@ -102,7 +107,11 @@ export function AppProvider({ children }: { children: ReactNode }) {
     currency,
     setCurrency,
     t
-  }), [theme, setTheme, language, setLanguage, currency, setCurrency, t]);
+  }), [theme, language, currency, t]);
+
+  if (!isMounted) {
+    return null;
+  }
 
   return <AppContext.Provider value={value}>{children}</AppContext.Provider>;
 }
