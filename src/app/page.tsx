@@ -224,7 +224,7 @@ export default function Home() {
             </AnimatedOnScroll>
         </section>
 
-        <section id="values" className="py-20 md:py-28 bg-background">
+        <section id="values" className="py-20 md:py-28 bg-transparent">
           <div className="container mx-auto px-4 md:px-6 relative">
             <AnimatedOnScroll animationName="animate__fadeInUp">
                 <div className="text-center space-y-4 mb-12">
