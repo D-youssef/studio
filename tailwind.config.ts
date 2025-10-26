@@ -121,7 +121,7 @@ export default {
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
-        'text-shimmer': 'text-shimmer 3s linear infinite',
+        'text-shimmer': 'text-shimmer 2s linear infinite',
         'spin-float': 'spin-float 4s ease-in-out infinite',
       },
     },
