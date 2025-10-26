@@ -7,7 +7,7 @@ import { Toaster } from '@/components/ui/toaster';
 import { cn } from '@/lib/utils';
 
 export const metadata: Metadata = {
-  title: 'Infynia - Limitless Possibilities',
+  title: 'Infynia | Limitless Possibilities',
   description: 'Infynia offers modern, scalable solutions including school registration, parent portals, and dentist booking systems.',
 };
 
