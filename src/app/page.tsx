@@ -10,6 +10,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useApp } from '@/hooks/use-app';
 import { AnimatedOnScroll } from '@/components/shared/animated-on-scroll';
+import { ParticlesBackground } from '@/components/shared/particles-background';
 
 const products = [
   {
@@ -81,8 +82,9 @@ export default function Home() {
   const { t } = useApp();
   return (
     <div className="flex flex-col">
-      <section className="relative w-full py-20 md:py-32 lg:py-40 bg-card">
-        <div className="container mx-auto px-4 md:px-6">
+      <section className="relative w-full py-20 md:py-32 lg:py-40 bg-card overflow-hidden">
+        <ParticlesBackground />
+        <div className="container mx-auto px-4 md:px-6 relative z-10">
           <div className="grid md:grid-cols-2 gap-8 items-center">
             <AnimatedOnScroll animationName="animate__fadeInLeft">
               <div className="space-y-6 text-center md:text-left">
