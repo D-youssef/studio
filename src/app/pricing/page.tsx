@@ -20,7 +20,8 @@ export default function PricingPage() {
   const symbol = currencySymbols[currency];
 
   const formatPrice = (price: number) => {
-    return `${symbol}${(price * rate).toLocaleString(undefined, { minimumFractionDigits: 0, maximumFractionDigits: 0 })}`;
+    const formattedPrice = (price * rate).toLocaleString(undefined, { minimumFractionDigits: 0, maximumFractionDigits: 0 });
+    return currency === "MAD" ? `${formattedPrice} ${symbol}` : `${symbol}${formattedPrice}`;
   };
 
   const formatRange = (range: { min: number; max: number }) => {
@@ -31,7 +32,7 @@ export default function PricingPage() {
   };
 
   return (
-    <div className="py-20 md:py-28">
+    <div className="py-20 md:py-28 bg-gray-50 dark:bg-gray-900/50">
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center space-y-4 mb-16">
           <h1 className="text-4xl md:text-5xl font-headline font-bold">Flexible Pricing for Every Need</h1>
@@ -40,60 +41,66 @@ export default function PricingPage() {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 xl:grid-cols-4 gap-8">
+        <div className="grid lg:grid-cols-2 xl:grid-cols-4 gap-8 items-stretch">
           {Object.values(PRICING_PLANS).map((plan, index) => (
-            <Card key={plan.name} className={cn("flex flex-col", index === 2 ? "border-primary shadow-lg" : "")}>
+            <Card 
+              key={plan.name} 
+              className={cn(
+                "flex flex-col rounded-xl overflow-hidden transition-all duration-300 hover:shadow-2xl hover:-translate-y-2", 
+                index === 2 ? "border-2 border-primary shadow-xl" : "border"
+              )}
+            >
               {index === 2 && (
-                <div className="bg-primary text-primary-foreground text-center py-1.5 text-sm font-semibold rounded-t-lg">
+                <div className="bg-primary text-primary-foreground text-center py-2 text-sm font-semibold">
                   Best Value
                 </div>
               )}
-              <CardHeader>
-                <CardTitle className="font-headline text-2xl">{plan.name}</CardTitle>
-                <CardDescription>
+              <CardHeader className="text-center pt-8 pb-4">
+                <CardTitle className="font-headline text-3xl">{plan.name}</CardTitle>
+                <CardDescription className="px-6">
                   {plan.name === "School Bundle" ? "The complete solution for educational institutions." : `Perfect for starting with our ${plan.name.toLowerCase()} solution.`}
                 </CardDescription>
               </CardHeader>
-              <CardContent className="flex-grow space-y-6">
-                <div className="space-y-2">
+              <CardContent className="flex-grow flex flex-col justify-between px-8 space-y-8">
+                <div className="space-y-4 text-center">
                   {plan.setup && (
-                    <div>
-                      <span className="text-4xl font-bold">{formatRange(plan.setup)}</span>
-                      <span className="text-muted-foreground"> / one-time setup</span>
+                    <div className="p-4 bg-muted/50 rounded-lg">
+                      <p className="text-lg font-bold text-primary">{formatRange(plan.setup)}</p>
+                      <p className="text-sm text-muted-foreground">one-time setup</p>
                     </div>
                   )}
                   {plan.yearly && (
-                     <div>
-                      <span className="text-4xl font-bold">{formatRange(plan.yearly)}</span>
-                      <span className="text-muted-foreground"> / year</span>
+                     <div className="p-4 bg-muted/50 rounded-lg">
+                      <p className="text-lg font-bold text-primary">{formatRange(plan.yearly)}</p>
+                      <p className="text-sm text-muted-foreground">per year</p>
                     </div>
                   )}
-                  <div>
-                    <span className="text-4xl font-bold">{formatRange(plan.monthly)}</span>
-                    <span className="text-muted-foreground"> / month</span>
+                   <div className="p-4 bg-muted/50 rounded-lg">
+                    <p className="text-lg font-bold text-primary">{formatRange(plan.monthly)}</p>
+                    <p className="text-sm text-muted-foreground">per month</p>
                   </div>
                 </div>
-                <ul className="space-y-3">
+                <ul className="space-y-3 pt-4 border-t">
                   {plan.features.map((feature) => (
-                    <li key={feature} className="flex items-center gap-2">
-                      <Check className="w-5 h-5 text-primary" />
+                    <li key={feature} className="flex items-start gap-3">
+                      <Check className="w-5 h-5 text-primary flex-shrink-0 mt-1" />
                       <span className="text-muted-foreground">{feature}</span>
                     </li>
                   ))}
                 </ul>
               </CardContent>
-              <CardFooter>
-                <Button asChild className="w-full" variant={index === 2 ? "default" : "outline"}>
+              <CardFooter className="p-6">
+                <Button asChild className="w-full text-lg py-6" size="lg" variant={index === 2 ? "default" : "outline"}>
                   <Link href="/contact">Get Started</Link>
                 </Button>
               </CardFooter>
             </Card>
           ))}
         </div>
-        <div className="text-center mt-16 max-w-2xl mx-auto">
-            <h3 className="font-headline text-xl font-semibold">Need a custom plan?</h3>
-            <p className="text-muted-foreground mt-2 mb-4">We can create a tailored package to fit your unique requirements. Contact us for a personalized quote.</p>
-            <Button asChild>
+        <div className="text-center mt-20 max-w-2xl mx-auto bg-card p-8 rounded-xl shadow-sm border">
+            <h3 className="font-headline text-2xl font-semibold">Need a custom plan?</h3>
+            <p className="text-muted-foreground mt-2 mb-6">We can create a tailored package to fit your unique requirements. Contact us for a personalized quote.</p>
+            <Button asChild size="lg">
                 <Link href="/contact">Contact Sales</Link>
             </Button>
         </div>
