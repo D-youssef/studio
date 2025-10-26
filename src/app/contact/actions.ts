@@ -1,6 +1,11 @@
+
 "use server";
 
 import { z } from "zod";
+import { Resend } from "resend";
+import { ContactFormEmail } from "@/emails/contact-form";
+
+const resend = new Resend(process.env.RESEND_API_KEY);
 
 const contactSchema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters."),
@@ -8,37 +13,6 @@ const contactSchema = z.object({
   subject: z.string().min(5, "Subject must be at least 5 characters."),
   message: z.string().min(10, "Message must be at least 10 characters."),
 });
-
-async function sendToTelegram(message: string) {
-  const botToken = process.env.TELEGRAM_BOT_TOKEN;
-  const chatId = process.env.TELEGRAM_CHAT_ID;
-
-  if (!botToken || !chatId) {
-    throw new Error("Telegram bot token or chat ID is not configured.");
-  }
-
-  const url = `https://api.telegram.org/bot${botToken}/sendMessage`;
-
-  const response = await fetch(url, {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({
-      chat_id: chatId,
-      text: message,
-      parse_mode: "HTML",
-    }),
-  });
-
-  if (!response.ok) {
-    const errorBody = await response.json();
-    console.error("Failed to send message to Telegram:", errorBody);
-    throw new Error("Failed to send message to Telegram.");
-  }
-
-  return response.json();
-}
 
 export async function submitContactForm(prevState: any, formData: FormData) {
   const validatedFields = contactSchema.safeParse({
@@ -56,20 +30,19 @@ export async function submitContactForm(prevState: any, formData: FormData) {
   }
 
   const { name, email, subject, message } = validatedFields.data;
-  
-  const telegramMessage = `
-<b>New Contact Form Submission</b>
------------------------------------
-<b>Name:</b> ${name}
-<b>Email:</b> ${email}
-<b>Subject:</b> ${subject}
-<b>Message:</b>
-${message}
------------------------------------
-  `;
 
   try {
-    await sendToTelegram(telegramMessage);
+    await resend.emails.send({
+      from: "onboarding@resend.dev",
+      to: "yousiii255@gmail.com",
+      subject: `New contact form submission: ${subject}`,
+      react: ContactFormEmail({
+        name,
+        email,
+        subject,
+        message,
+      }),
+    });
 
     return {
       type: "success" as const,

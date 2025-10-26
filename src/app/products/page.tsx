@@ -1,3 +1,4 @@
+
 "use client";
 
 import { Button } from "@/components/ui/button";
@@ -15,7 +16,7 @@ export default function ProductsPage() {
   const { t } = useApp();
 
   return (
-    <div>
+    <div className="bg-transparent">
       <section className="py-20 md:py-28">
         <div className="container mx-auto px-4 md:px-6">
           <AnimatedOnScroll animationName="animate__fadeInDown">
@@ -54,7 +55,7 @@ export default function ProductsPage() {
                         <Link href="/pricing">{t('productsPage.viewPricing')}</Link>
                       </Button>
                       <Button asChild variant="outline">
-                        <a href="https://wa.me/212680546540" target="_blank" rel="noopener noreferrer">
+                        <a href="https://wa.me/212695314812" target="_blank" rel="noopener noreferrer">
                           <FaWhatsapp className="mr-2 h-5 w-5 text-[#25D366]" />
                           {t('productsPage.contactOnWhatsApp')}
                         </a>

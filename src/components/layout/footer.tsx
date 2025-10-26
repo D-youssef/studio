@@ -1,3 +1,4 @@
+
 "use client";
 
 import { Logo } from "@/components/logo";
@@ -58,7 +59,7 @@ export function Footer() {
           <div className="space-y-2">
             <h4 className="font-semibold font-headline">{t('footer.connectWithUs')}</h4>
             <div className="flex space-x-4">
-              <SocialIcon href="https://wa.me/212680546540">
+              <SocialIcon href="https://wa.me/212695314812">
                  <FaWhatsapp size={24} />
                  <span className="sr-only">WhatsApp</span>
               </SocialIcon>
