@@ -47,6 +47,12 @@
       "description": "Abstract image of an automation workflow.",
       "imageUrl": "https://images.unsplash.com/photo-1677756119517-756a188d2d94?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxhdXRvbWF0aW9uJTIwd29ya2Zsb3d8ZW58MHx8fHwxNzYxNDczMzcwfDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "automation workflow"
+    },
+    {
+      "id": "9",
+      "description": "Person looking out at a futuristic city skyline, representing vision.",
+      "imageUrl": "https://images.unsplash.com/photo-1531379415783-ba2d288828b6?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "imageHint": "vision future"
     }
   ]
 }

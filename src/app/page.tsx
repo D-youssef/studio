@@ -81,6 +81,7 @@ export default function Home() {
   const { t } = useApp();
   const productsBgImage = PlaceHolderImages.find(img => img.id === '8');
   const missionBgImage = PlaceHolderImages.find(img => img.id === '1');
+  const visionBgImage = PlaceHolderImages.find(img => img.id === '9');
 
   return (
     <div className="flex flex-col">
@@ -165,80 +166,91 @@ export default function Home() {
         </div>
       </section>
       
-      <section id="mission" className="py-20 md:py-28 relative">
-         {missionBgImage && (
-          <Image
-            src={missionBgImage.imageUrl}
-            alt={missionBgImage.description}
-            fill
-            className="object-cover"
-            data-ai-hint={missionBgImage.imageHint}
-          />
-        )}
-        <div className="absolute inset-0 bg-card/90"></div>
-        <div className="container mx-auto px-4 md:px-6 relative">
-          <div className="grid md:grid-cols-2 gap-16 items-center">
-            <AnimatedOnScroll animationName="animate__fadeInLeft">
-              <div className="space-y-8">
-                <div className="flex items-start gap-4">
-                  <div className="bg-primary/10 p-3 rounded-full mt-1">
-                    <Target className="w-8 h-8 text-primary" />
-                  </div>
-                  <div>
-                    <h3 className="text-2xl font-headline font-bold mb-2">{t('home.mission.title')}</h3>
-                    <p className="text-muted-foreground">{t('home.mission.description')}</p>
-                  </div>
+        <section id="mission-vision" className="py-20 md:py-28 grid md:grid-cols-2">
+            <AnimatedOnScroll animationName="animate__fadeInLeft" className="relative p-8 md:p-12 flex flex-col justify-center">
+                {missionBgImage && (
+                    <Image
+                        src={missionBgImage.imageUrl}
+                        alt={missionBgImage.description}
+                        fill
+                        className="object-cover"
+                        data-ai-hint={missionBgImage.imageHint}
+                    />
+                )}
+                <div className="absolute inset-0 bg-card/90"></div>
+                <div className="relative space-y-8">
+                    <div className="flex items-start gap-4">
+                        <div className="bg-primary/10 p-3 rounded-full mt-1">
+                            <Target className="w-8 h-8 text-primary" />
+                        </div>
+                        <div>
+                            <h3 className="text-2xl font-headline font-bold mb-2">{t('home.mission.title')}</h3>
+                            <p className="text-muted-foreground">{t('home.mission.description')}</p>
+                        </div>
+                    </div>
+                    <div className="flex items-start gap-4">
+                        <div className="bg-accent/10 p-3 rounded-full mt-1">
+                            <BrainCircuit className="w-8 h-8 text-accent" />
+                        </div>
+                        <div>
+                            <h3 className="text-2xl font-headline font-bold mb-2">{t('home.belief.title')}</h3>
+                            <p className="text-muted-foreground">{t('home.belief.description')}</p>
+                        </div>
+                    </div>
                 </div>
-                <div className="flex items-start gap-4">
-                  <div className="bg-accent/10 p-3 rounded-full mt-1">
-                    <BrainCircuit className="w-8 h-8 text-accent" />
-                  </div>
-                  <div>
-                    <h3 className="text-2xl font-headline font-bold mb-2">{t('home.belief.title')}</h3>
-                    <p className="text-muted-foreground">{t('home.belief.description')}</p>
-                  </div>
-                </div>
-              </div>
             </AnimatedOnScroll>
-             <AnimatedOnScroll animationName="animate__fadeInRight">
-                <div className="flex items-start gap-4">
-                  <div className="bg-primary/10 p-3 rounded-full mt-1">
-                    <Eye className="w-8 h-8 text-primary" />
-                  </div>
-                  <div>
-                    <h3 className="text-2xl font-headline font-bold mb-2">{t('home.vision.title')}</h3>
-                    <p className="text-muted-foreground">{t('home.vision.description')}</p>
-                  </div>
+            <AnimatedOnScroll animationName="animate__fadeInRight" className="relative p-8 md:p-12 flex flex-col justify-center">
+                {visionBgImage && (
+                    <Image
+                        src={visionBgImage.imageUrl}
+                        alt={visionBgImage.description}
+                        fill
+                        className="object-cover"
+                        data-ai-hint={visionBgImage.imageHint}
+                    />
+                )}
+                <div className="absolute inset-0 bg-card/90"></div>
+                <div className="relative">
+                    <div className="flex items-start gap-4">
+                        <div className="bg-primary/10 p-3 rounded-full mt-1">
+                            <Eye className="w-8 h-8 text-primary" />
+                        </div>
+                        <div>
+                            <h3 className="text-2xl font-headline font-bold mb-2">{t('home.vision.title')}</h3>
+                            <p className="text-muted-foreground">{t('home.vision.description')}</p>
+                        </div>
+                    </div>
+                </div>
+            </AnimatedOnScroll>
+        </section>
+
+        <section id="values" className="py-20 md:py-28 bg-background">
+          <div className="container mx-auto px-4 md:px-6 relative">
+            <AnimatedOnScroll animationName="animate__fadeInUp">
+                <div className="text-center space-y-4 mb-12">
+                    <h2 className="text-3xl md:text-4xl font-headline font-bold">{t('home.values.title')}</h2>
+                    <p className="max-w-2xl mx-auto text-muted-foreground">
+                        {t('home.values.subtitle')}
+                    </p>
+                </div>
+                <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                    {coreValues.map((value, index) => (
+                        <AnimatedOnScroll key={value.nameKey} animationName="animate__zoomIn" delay={`animate__delay-${index * 1}s`}>
+                            <div className="text-center p-4">
+                                <div className="flex justify-center mb-4">
+                                    <div className="bg-primary/10 p-4 rounded-full">
+                                        <value.icon className="w-8 h-8 text-primary" />
+                                    </div>
+                                </div>
+                                <h3 className="text-xl font-headline font-bold mb-2">{t(value.nameKey)}</h3>
+                                <p className="text-muted-foreground">{t(value.descriptionKey)}</p>
+                            </div>
+                        </AnimatedOnScroll>
+                    ))}
                 </div>
             </AnimatedOnScroll>
           </div>
-          
-          <AnimatedOnScroll animationName="animate__fadeInUp" className="mt-20">
-            <div className="text-center space-y-4 mb-12">
-              <h2 className="text-3xl md:text-4xl font-headline font-bold">{t('home.values.title')}</h2>
-              <p className="max-w-2xl mx-auto text-muted-foreground">
-                {t('home.values.subtitle')}
-              </p>
-            </div>
-            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
-              {coreValues.map((value, index) => (
-                <AnimatedOnScroll key={value.nameKey} animationName="animate__zoomIn" delay={`animate__delay-${index * 1}s`}>
-                  <div className="text-center p-4">
-                    <div className="flex justify-center mb-4">
-                      <div className="bg-primary/10 p-4 rounded-full">
-                        <value.icon className="w-8 h-8 text-primary" />
-                      </div>
-                    </div>
-                    <h3 className="text-xl font-headline font-bold mb-2">{t(value.nameKey)}</h3>
-                    <p className="text-muted-foreground">{t(value.descriptionKey)}</p>
-                  </div>
-                </AnimatedOnScroll>
-              ))}
-            </div>
-          </AnimatedOnScroll>
-        </div>
-      </section>
-
+        </section>
     </div>
   );
 }
