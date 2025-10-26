@@ -15,7 +15,7 @@ export default function ProductsPage() {
   const { t } = useApp();
 
   return (
-    <div className="bg-background">
+    <div>
       <section className="py-20 md:py-28">
         <div className="container mx-auto px-4 md:px-6">
           <AnimatedOnScroll animationName="animate__fadeInDown">
