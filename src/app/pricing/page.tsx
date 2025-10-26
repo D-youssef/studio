@@ -7,6 +7,7 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Check } from "lucide-react";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
+import { useEffect, useState } from "react";
 
 const currencySymbols = {
   USD: "$",
@@ -16,8 +17,13 @@ const currencySymbols = {
 
 export default function PricingPage() {
   const { currency } = useApp();
+  const [isMounted, setIsMounted] = useState(false);
   const rate = CURRENCY_RATES[currency];
   const symbol = currencySymbols[currency];
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
 
   const formatPrice = (price: number) => {
     const formattedPrice = (price * rate).toLocaleString(undefined, { minimumFractionDigits: 0, maximumFractionDigits: 0 });
@@ -65,18 +71,18 @@ export default function PricingPage() {
                 <div className="space-y-4 text-center">
                   {plan.setup && (
                     <div className="p-4 bg-muted/50 rounded-lg">
-                      <p className="text-lg font-bold text-primary">{formatRange(plan.setup)}</p>
+                      <p className="text-lg font-bold text-primary">{isMounted ? formatRange(plan.setup) : '...'}</p>
                       <p className="text-sm text-muted-foreground">one-time setup</p>
                     </div>
                   )}
                   {plan.yearly && (
                      <div className="p-4 bg-muted/50 rounded-lg">
-                      <p className="text-lg font-bold text-primary">{formatRange(plan.yearly)}</p>
+                      <p className="text-lg font-bold text-primary">{isMounted ? formatRange(plan.yearly) : '...'}</p>
                       <p className="text-sm text-muted-foreground">per year</p>
                     </div>
                   )}
                    <div className="p-4 bg-muted/50 rounded-lg">
-                    <p className="text-lg font-bold text-primary">{formatRange(plan.monthly)}</p>
+                    <p className="text-lg font-bold text-primary">{isMounted ? formatRange(plan.monthly) : '...'}</p>
                     <p className="text-sm text-muted-foreground">per month</p>
                   </div>
                 </div>
