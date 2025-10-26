@@ -5,7 +5,7 @@
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
-import { CheckCircle2, Languages, Palette, DollarSign } from 'lucide-react';
+import { CheckCircle2, Languages, Palette, DollarSign, Target, Eye, Sparkles, HandHeart, ShieldCheck, Combine, Lightbulb, BrainCircuit } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useApp } from '@/hooks/use-app';
@@ -35,26 +35,26 @@ const products = [
   },
 ];
 
-const features = [
+const coreValues = [
   {
-    nameKey: 'features.multilingual.name',
-    descriptionKey: 'features.multilingual.description',
-    icon: Languages,
+    nameKey: 'home.values.innovation.name',
+    descriptionKey: 'home.values.innovation.description',
+    icon: Sparkles,
   },
   {
-    nameKey: 'features.darkLight.name',
-    descriptionKey: 'features.darkLight.description',
-    icon: Palette,
+    nameKey: 'home.values.humanCentered.name',
+    descriptionKey: 'home.values.humanCentered.description',
+    icon: HandHeart,
   },
   {
-    nameKey: 'features.currency.name',
-    descriptionKey: 'features.currency.description',
-    icon: DollarSign,
+    nameKey: 'home.values.trust.name',
+    descriptionKey: 'home.values.trust.description',
+    icon: ShieldCheck,
   },
   {
-    nameKey: 'features.customizable.name',
-    descriptionKey: 'features.customizable.description',
-    icon: CheckCircle2,
+    nameKey: 'home.values.integration.name',
+    descriptionKey: 'home.values.integration.description',
+    icon: Combine,
   },
 ];
 
@@ -144,39 +144,71 @@ export default function Home() {
           </AnimatedOnScroll>
         </div>
       </section>
-
-      <section id="features" className="py-20 md:py-28 bg-card">
+      
+      <section id="mission" className="py-20 md:py-28 bg-card">
         <div className="container mx-auto px-4 md:px-6">
-          <AnimatedOnScroll animationName="animate__fadeInDown">
+          <div className="grid md:grid-cols-2 gap-16 items-center">
+            <AnimatedOnScroll animationName="animate__fadeInLeft">
+              <div className="space-y-8">
+                <div className="flex items-start gap-4">
+                  <div className="bg-primary/10 p-3 rounded-full mt-1">
+                    <Target className="w-8 h-8 text-primary" />
+                  </div>
+                  <div>
+                    <h3 className="text-2xl font-headline font-bold mb-2">{t('home.mission.title')}</h3>
+                    <p className="text-muted-foreground">{t('home.mission.description')}</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-4">
+                  <div className="bg-accent/10 p-3 rounded-full mt-1">
+                    <BrainCircuit className="w-8 h-8 text-accent" />
+                  </div>
+                  <div>
+                    <h3 className="text-2xl font-headline font-bold mb-2">{t('home.belief.title')}</h3>
+                    <p className="text-muted-foreground">{t('home.belief.description')}</p>
+                  </div>
+                </div>
+              </div>
+            </AnimatedOnScroll>
+             <AnimatedOnScroll animationName="animate__fadeInRight">
+                <div className="flex items-start gap-4">
+                  <div className="bg-primary/10 p-3 rounded-full mt-1">
+                    <Eye className="w-8 h-8 text-primary" />
+                  </div>
+                  <div>
+                    <h3 className="text-2xl font-headline font-bold mb-2">{t('home.vision.title')}</h3>
+                    <p className="text-muted-foreground">{t('home.vision.description')}</p>
+                  </div>
+                </div>
+            </AnimatedOnScroll>
+          </div>
+          
+          <AnimatedOnScroll animationName="animate__fadeInUp" className="mt-20">
             <div className="text-center space-y-4 mb-12">
-              <h2 className="text-3xl md:text-4xl font-headline font-bold">{t('home.features.title')}</h2>
+              <h2 className="text-3xl md:text-4xl font-headline font-bold">{t('home.values.title')}</h2>
               <p className="max-w-2xl mx-auto text-muted-foreground">
-              {t('home.features.subtitle')}
+                {t('home.values.subtitle')}
               </p>
             </div>
-          </AnimatedOnScroll>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => (
-              <AnimatedOnScroll key={feature.nameKey} animationName="animate__zoomIn" delay={`animate__delay-${index * 1}s`}>
-                <div className="text-center p-4">
-                  <div className="flex justify-center mb-4">
-                    <div className="bg-primary/10 p-4 rounded-full">
-                      <feature.icon className="w-8 h-8 text-primary" />
+            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+              {coreValues.map((value, index) => (
+                <AnimatedOnScroll key={value.nameKey} animationName="animate__zoomIn" delay={`animate__delay-${index * 1}s`}>
+                  <div className="text-center p-4">
+                    <div className="flex justify-center mb-4">
+                      <div className="bg-primary/10 p-4 rounded-full">
+                        <value.icon className="w-8 h-8 text-primary" />
+                      </div>
                     </div>
+                    <h3 className="text-xl font-headline font-bold mb-2">{t(value.nameKey)}</h3>
+                    <p className="text-muted-foreground">{t(value.descriptionKey)}</p>
                   </div>
-                  <h3 className="text-xl font-headline font-bold mb-2">{t(feature.nameKey)}</h3>
-                  <p className="text-muted-foreground">{t(feature.descriptionKey)}</p>
-                </div>
-              </AnimatedOnScroll>
-            ))}
-          </div>
+                </AnimatedOnScroll>
+              ))}
+            </div>
+          </AnimatedOnScroll>
         </div>
       </section>
+
     </div>
   );
 }
-
-    
-    
-
-    

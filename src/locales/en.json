@@ -31,7 +31,7 @@
   "home": {
     "hero": {
       "title": {
-        "part1": "Limitless Possibilities, ",
+        "part1": "Limitless Possibilities,",
         "part2": "Intelligently Delivered."
       },
       "subtitle": "We create smart automations that handle the busywork, so you can focus on building, innovating, and growing. Infynia streamlines your workflow, connects your tools, and unlocks more time for what truly matters.",
@@ -43,9 +43,37 @@
       "subtitle": "Powerful, intuitive, and ready to integrate into your workflow.",
       "exploreAll": "Explore All Products →"
     },
-    "features": {
-      "title": "Designed for a Global Audience",
-      "subtitle": "We build with flexibility and user experience at the core of everything we do."
+    "mission": {
+      "title": "Our Mission",
+      "description": "To democratize access to intelligent digital solutions by creating an ecosystem where artificial intelligence seamlessly integrates with human creativity and organizational needs. We empower schools, healthcare providers, and businesses to unlock infinite possibilities through technology that adapts, learns, and grows with them."
+    },
+    "belief": {
+      "title": "Core Belief",
+      "description": "Every organization deserves access to cutting-edge technology that enhances rather than complicates their operations."
+    },
+    "vision": {
+      "title": "Our Vision",
+      "description": "To become the global catalyst for intelligent digital transformation, where every interaction between humans and technology creates value, drives growth, and opens new possibilities. We envision a future where AI-powered solutions are as natural and essential as electricity, seamlessly woven into the fabric of daily operations across all industries."
+    },
+    "values": {
+      "title": "Our Core Values",
+      "subtitle": "These principles guide every decision we make and every solution we create.",
+      "innovation": {
+        "name": "Innovation First",
+        "description": "We believe in pushing boundaries and exploring new frontiers in AI and digital transformation."
+      },
+      "humanCentered": {
+        "name": "Human-Centered",
+        "description": "Technology should amplify human potential, not complicate it. Every solution we create puts people first."
+      },
+      "trust": {
+        "name": "Trust & Transparency",
+        "description": "We build lasting relationships through honest communication and reliable service delivery."
+      },
+      "integration": {
+        "name": "Seamless Integration",
+        "description": "Our solutions integrate effortlessly into existing workflows, minimizing disruption while maximizing impact."
+      }
     }
   },
   "products": {
@@ -64,24 +92,6 @@
     "inscriptionFaq": {
       "title": "Inscription & FAQ",
       "description": "A streamlined school registration system designed for efficiency and ease of use. Our platform simplifies the enrollment process for administrators, parents, and students. It features an intelligent, AI-powered FAQ module that learns from user interactions to provide instant, accurate answers, reducing administrative workload."
-    }
-  },
-  "features": {
-    "multilingual": {
-      "name": "Multilingual Support",
-      "description": "Engage with a global audience with seamless translations in English, French, and Arabic."
-    },
-    "darkLight": {
-      "name": "Dark & Light Modes",
-      "description": "A comfortable viewing experience, day or night, with a user-friendly theme toggle."
-    },
-    "currency": {
-      "name": "Currency Switcher",
-      "description": "Display pricing in USD, MAD, or EUR to cater to your international client base."
-    },
-    "customizable": {
-      "name": "Fully Customizable",
-      "description": "Tailor every aspect of our solutions to fit the unique needs of your organization."
     }
   },
   "productsPage": {
@@ -241,5 +251,3 @@
     "button": "Proceed to Secure Login"
   }
 }
-
-    

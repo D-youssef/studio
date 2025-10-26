@@ -31,7 +31,7 @@
   "home": {
     "hero": {
       "title": {
-        "part1": "Des possibilités infinies, ",
+        "part1": "Des possibilités infinies,",
         "part2": "intelligemment livrées."
       },
       "subtitle": "Nous créons des automatisations intelligentes qui s'occupent des tâches fastidieuses, afin que vous puissiez vous concentrer sur la construction, l'innovation et la croissance. Infynia rationalise votre flux de travail, connecte vos outils et libère plus de temps pour ce qui compte vraiment.",
@@ -43,9 +43,37 @@
       "subtitle": "Puissants, intuitifs et prêts à être intégrés dans votre flux de travail.",
       "exploreAll": "Découvrir tous les produits →"
     },
-    "features": {
-      "title": "Conçu pour un public mondial",
-      "subtitle": "Nous construisons avec la flexibilité et l'expérience utilisateur au cœur de tout ce que nous faisons."
+    "mission": {
+      "title": "Notre Mission",
+      "description": "Démocratiser l'accès aux solutions numériques intelligentes en créant un écosystème où l'intelligence artificielle s'intègre de manière transparente à la créativité humaine et aux besoins organisationnels. Nous donnons aux écoles, aux prestataires de soins de santé et aux entreprises les moyens de libérer des possibilités infinies grâce à une technologie qui s'adapte, apprend et grandit avec eux."
+    },
+    "belief": {
+      "title": "Croyance Fondamentale",
+      "description": "Chaque organisation mérite d'avoir accès à une technologie de pointe qui améliore plutôt que de compliquer ses opérations."
+    },
+    "vision": {
+      "title": "Notre Vision",
+      "description": "Devenir le catalyseur mondial de la transformation numérique intelligente, où chaque interaction entre l'homme et la technologie crée de la valeur, stimule la croissance et ouvre de nouvelles possibilités. Nous envisageons un avenir où les solutions basées sur l'IA seront aussi naturelles et essentielles que l'électricité, intégrées de manière transparente dans le tissu des opérations quotidiennes de tous les secteurs."
+    },
+    "values": {
+      "title": "Nos Valeurs Fondamentales",
+      "subtitle": "Ces principes guident chaque décision que nous prenons et chaque solution que nous créons.",
+      "innovation": {
+        "name": "L'innovation d'abord",
+        "description": "Nous croyons qu'il faut repousser les limites et explorer de nouvelles frontières en matière d'IA et de transformation numérique."
+      },
+      "humanCentered": {
+        "name": "Centré sur l'humain",
+        "description": "La technologie doit amplifier le potentiel humain, pas le compliquer. Chaque solution que nous créons place l'humain au premier plan."
+      },
+      "trust": {
+        "name": "Confiance et Transparence",
+        "description": "Nous établissons des relations durables grâce à une communication honnête et à une prestation de services fiable."
+      },
+      "integration": {
+        "name": "Intégration Transparente",
+        "description": "Nos solutions s'intègrent sans effort aux flux de travail existants, minimisant les perturbations tout en maximisant l'impact."
+      }
     }
   },
   "products": {
@@ -64,24 +92,6 @@
     "inscriptionFaq": {
       "title": "Inscription & FAQ",
       "description": "Un système d'inscription scolaire simplifié, conçu pour l'efficacité et la facilité d'utilisation. Notre plateforme simplifie le processus d'inscription pour les administrateurs, les parents et les élèves. Il comprend un module FAQ intelligent, alimenté par l'IA, qui apprend des interactions des utilisateurs pour fournir des réponses instantanées et précises, réduisant ainsi la charge de travail administrative."
-    }
-  },
-  "features": {
-    "multilingual": {
-      "name": "Support multilingue",
-      "description": "Interagissez avec un public mondial grâce à des traductions fluides en anglais, français et arabe."
-    },
-    "darkLight": {
-      "name": "Modes sombre et clair",
-      "description": "Une expérience de visionnage confortable, de jour comme de nuit, avec un sélecteur de thème convivial."
-    },
-    "currency": {
-      "name": "Sélecteur de devise",
-      "description": "Affichez les prix en USD, MAD ou EUR pour répondre à votre clientèle internationale."
-    },
-    "customizable": {
-      "name": "Entièrement personnalisable",
-      "description": "Adaptez chaque aspect de nos solutions pour répondre aux besoins uniques de votre organisation."
     }
   },
   "productsPage": {
@@ -241,5 +251,3 @@
     "button": "Accéder à la connexion sécurisée"
   }
 }
-
-    
