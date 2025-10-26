@@ -80,6 +80,8 @@ const InfinityHeroAnimation = () => (
 
 export default function Home() {
   const { t } = useApp();
+  const productsBgImage = PlaceHolderImages.find(img => img.id === '8');
+
   return (
     <div className="flex flex-col">
       <section className="relative w-full py-20 md:py-32 lg:py-40 bg-card overflow-hidden">
@@ -117,8 +119,18 @@ export default function Home() {
         </div>
       </section>
       
-      <section id="products" className="py-20 md:py-28">
-        <div className="container mx-auto px-4 md:px-6">
+      <section id="products" className="py-20 md:py-28 relative">
+        {productsBgImage && (
+          <Image
+            src={productsBgImage.imageUrl}
+            alt={productsBgImage.description}
+            fill
+            className="object-cover"
+            data-ai-hint={productsBgImage.imageHint}
+          />
+        )}
+        <div className="absolute inset-0 bg-background/80 backdrop-blur-sm"></div>
+        <div className="container mx-auto px-4 md:px-6 relative">
           <AnimatedOnScroll animationName="animate__fadeInDown">
             <div className="text-center space-y-4 mb-12">
               <h2 className="text-3xl md:text-4xl font-headline font-bold">{t('home.products.title')}</h2>
@@ -130,7 +142,7 @@ export default function Home() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {products.map((product, index) => (
               <AnimatedOnScroll key={product.titleKey} animationName="animate__fadeInUp" delay={`animate__delay-${index * 1}s`}>
-                <Card className="flex flex-col transition-transform transform hover:-translate-y-2 hover:shadow-xl h-full">
+                <Card className="flex flex-col transition-transform transform hover:-translate-y-2 hover:shadow-xl h-full bg-card/80">
                   <CardHeader className="flex flex-row items-center gap-4">
                     <div className="bg-primary/10 p-3 rounded-full">
                       <product.icon className="w-6 h-6 text-primary" />

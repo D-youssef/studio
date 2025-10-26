@@ -41,6 +41,12 @@
       "description": "A secure digital lock interface.",
       "imageUrl": "https://images.unsplash.com/photo-1651235732694-0d057ace2f30?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxzZWN1cmUlMjBsb2dpbnxlbnwwfHx8fDE3NjE0NjcwMzh8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "secure login"
+    },
+    {
+      "id": "8",
+      "description": "Abstract image of an automation workflow.",
+      "imageUrl": "https://images.unsplash.com/photo-1677756119517-756a188d2d94?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxhdXRvbWF0aW9uJTIwd29ya2Zsb3d8ZW58MHx8fHwxNzYxNDczMzcwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "automation workflow"
     }
   ]
 }
