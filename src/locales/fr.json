@@ -1,0 +1,240 @@
+
+{
+  "nav": {
+    "home": "Accueil",
+    "products": "Produits",
+    "pricing": "Tarifs",
+    "faq": "FAQ",
+    "about": "À propos",
+    "contact": "Contact"
+  },
+  "header": {
+    "toggleMenu": "Basculer le menu",
+    "portalLogin": "Connexion au portail",
+    "changeLanguage": "Changer de langue",
+    "toggleTheme": "Changer de thème"
+  },
+  "theme": {
+    "light": "Clair",
+    "dark": "Sombre",
+    "system": "Système"
+  },
+  "footer": {
+    "tagline": "Des possibilités infinies, intelligemment livrées.",
+    "quickLinks": "Liens rapides",
+    "legal": "Légal",
+    "privacyPolicy": "Politique de confidentialité",
+    "termsOfService": "Conditions d'utilisation",
+    "connectWithUs": "Restez connectés",
+    "copyright": "Infynia. Tous droits réservés."
+  },
+  "home": {
+    "hero": {
+      "title": "Infynia : Des possibilités infinies, <span class=\"block text-primary\">intelligemment livrées.</span>",
+      "subtitle": "Des solutions modernes, multilingues et conviviales conçues pour évoluer avec vos ambitions. De l'administration scolaire à la gestion de cabinet, Infynia est votre partenaire de croissance.",
+      "getStarted": "Commencer",
+      "seePricing": "Voir les tarifs"
+    },
+    "products": {
+      "title": "Nos produits phares",
+      "subtitle": "Puissants, intuitifs et prêts à être intégrés dans votre flux de travail.",
+      "exploreAll": "Découvrir tous les produits →"
+    },
+    "features": {
+      "title": "Conçu pour un public mondial",
+      "subtitle": "Nous construisons avec la flexibilité et l'expérience utilisateur au cœur de tout ce que nous faisons."
+    }
+  },
+  "products": {
+    "inscription": {
+      "title": "Inscription & FAQ",
+      "description": "Un système d'inscription scolaire simplifié avec un module FAQ intelligent et intégré."
+    },
+    "parentPortal": {
+      "title": "Portail des parents",
+      "description": "Tenez les parents informés avec des mises à jour en temps réel sur l'assiduité, les notes et les annonces de l'école."
+    },
+    "dentistBooking": {
+      "title": "Réservation de dentiste",
+      "description": "Planification de rendez-vous sans effort pour les cliniques dentaires avec intégration de Google Calendar."
+    },
+    "inscriptionFaq": {
+      "title": "Inscription & FAQ",
+      "description": "Un système d'inscription scolaire simplifié, conçu pour l'efficacité et la facilité d'utilisation. Notre plateforme simplifie le processus d'inscription pour les administrateurs, les parents et les élèves. Il comprend un module FAQ intelligent, alimenté par l'IA, qui apprend des interactions des utilisateurs pour fournir des réponses instantanées et précises, réduisant ainsi la charge de travail administrative."
+    }
+  },
+  "features": {
+    "multilingual": {
+      "name": "Support multilingue",
+      "description": "Interagissez avec un public mondial grâce à des traductions fluides en anglais, français et arabe."
+    },
+    "darkLight": {
+      "name": "Modes sombre et clair",
+      "description": "Une expérience de visionnage confortable, de jour comme de nuit, avec un sélecteur de thème convivial."
+    },
+    "currency": {
+      "name": "Sélecteur de devise",
+      "description": "Affichez les prix en USD, MAD ou EUR pour répondre à votre clientèle internationale."
+    },
+    "customizable": {
+      "name": "Entièrement personnalisable",
+      "description": "Adaptez chaque aspect de nos solutions pour répondre aux besoins uniques de votre organisation."
+    }
+  },
+  "productsPage": {
+    "title": "Nos solutions",
+    "subtitle": "Découvrez notre suite de produits intelligents, évolutifs et centrés sur l'utilisateur, conçus pour résoudre des défis du monde réel.",
+    "viewPricing": "Voir les tarifs",
+    "contactOnWhatsApp": "Contacter sur WhatsApp",
+    "comingSoon": {
+      "title": "Bientôt disponible",
+      "description": "L'innovation ne s'arrête jamais chez Infynia. Nous développons constamment de nouveaux outils pour autonomiser nos clients. Voici un aperçu de ce qui s'en vient."
+    }
+  },
+  "upcomingProducts": {
+    "aiTutoring": {
+      "title": "Plateforme de tutorat par IA",
+      "description": "Parcours d'apprentissage personnalisés et évaluations adaptatives pour les étudiants."
+    },
+    "ecommerceSuite": {
+      "title": "Suite E-commerce",
+      "description": "Une boîte à outils complète pour créer et développer des boutiques en ligne."
+    }
+  },
+  "pricing": {
+    "title": "Des tarifs flexibles pour tous les besoins",
+    "subtitle": "Choisissez le plan qui vous convient. Tous les prix sont affichés en",
+    "bestValue": "Meilleur rapport qualité-prix",
+    "oneTimeSetup": "frais d'installation uniques",
+    "perYear": "par an",
+    "perMonth": "par mois",
+    "getStarted": "Commencer",
+    "customPlan": {
+      "title": "Besoin d'un plan personnalisé ?",
+      "description": "Nous pouvons créer un forfait sur mesure pour répondre à vos exigences uniques. Contactez-nous pour un devis personnalisé.",
+      "button": "Contacter les ventes"
+    },
+    "plans": {
+      "parentPortal": {
+        "name": "Portail des parents",
+        "description": "Idéal pour commencer avec notre solution de portail parents."
+      },
+      "inscriptionFaq": {
+        "name": "Inscription & FAQ",
+        "description": "Idéal pour commencer avec notre solution d'inscription & FAQ."
+      },
+      "schoolBundle": {
+        "name": "Forfait École",
+        "description": "La solution complète pour les établissements d'enseignement."
+      },
+      "dentistBooking": {
+        "name": "Réservation Dentiste",
+        "description": "Idéal pour commencer avec notre solution de réservation de dentiste."
+      }
+    },
+    "features": {
+      "attendance": "Suivi de l'assiduité",
+      "grades": "Notes et remarques",
+      "announcements": "Annonces de l'école",
+      "messaging": "Messagerie sécurisée",
+      "registration": "Formulaires d'inscription en ligne",
+      "upload": "Téléchargement de documents",
+      "aiFaq": "FAQ alimentée par l'IA",
+      "payment": "Intégration des paiements",
+      "allParentPortal": "Toutes les fonctionnalités du Portail Parents",
+      "allInscriptionFaq": "Toutes les fonctionnalités d'Inscription & FAQ",
+      "prioritySupport": "Support prioritaire",
+      "accountManager": "Gestionnaire de compte dédié",
+      "onlineBooking": "Prise de rendez-vous en ligne",
+      "googleCalendar": "Synchronisation avec Google Agenda",
+      "reminders": "Rappels automatiques",
+      "patientManagement": "Gestion des patients"
+    }
+  },
+  "faq": {
+    "title": "Foire Aux Questions",
+    "subtitle": "Trouvez des réponses aux questions courantes sur Infynia.",
+    "whatIs": {
+      "question": "Qu'est-ce qu'Infynia ?",
+      "answer": "Infynia est une agence d'automatisation alimentée par l'IA qui aide les particuliers et les entreprises à optimiser leurs flux de travail. Nous concevons des systèmes intelligents qui s'occupent des tâches répétitives, afin que vous puissiez vous concentrer sur la création, l'innovation et la croissance."
+    },
+    "whatDoes": {
+      "question": "Que fait Infynia ?",
+      "answer": "Nous créons des solutions d'automatisation personnalisées qui connectent vos outils, organisent vos processus et réduisent le travail manuel. Qu'il s'agisse de gérer des données, de gérer la communication ou de simplifier les opérations, Infynia assure le bon fonctionnement de votre flux de travail en arrière-plan."
+    },
+    "whoBenefits": {
+      "question": "Qui peut bénéficier d'Infynia ?",
+      "answer": "- Les entrepreneurs qui veulent gagner du temps et faire évoluer leurs projets\n- Les petites entreprises qui cherchent à améliorer leur efficacité sans embaucher de personnel supplémentaire\n- Les créateurs et les indépendants qui veulent se concentrer sur leur métier plutôt que sur les tâches administratives\n- Les équipes qui ont besoin d'une meilleure collaboration et de moins de tâches répétitives"
+    },
+    "howHelp": {
+      "question": "Comment Infynia m'aide-t-elle à « créer quelque chose de génial » ?",
+      "answer": "En supprimant la friction des tâches répétitives, Infynia libère votre énergie pour ce qui compte vraiment : construire, innover et atteindre vos objectifs. Nous pensons que l'automatisation n'est pas seulement une question d'efficacité ; il s'agit de libérer votre potentiel."
+    },
+    "techSkills": {
+      "question": "Ai-je besoin de compétences techniques pour utiliser Infynia ?",
+      "answer": "Pas du tout. Nous nous occupons de la configuration technique et concevons tout pour que ce soit convivial. Vous profiterez simplement des avantages d'un système qui fonctionne pour vous, et non l'inverse."
+    },
+    "whyChoose": {
+      "question": "Pourquoi choisir Infynia ?",
+      "answer": "- Une automatisation sur mesure, adaptée à vos besoins\n- Des solutions basées sur l'IA qui s'adaptent et évoluent avec vous\n- Plus de temps, moins de stress et un impact plus grand"
+    }
+  },
+  "about": {
+    "title": "À propos d'Infynia",
+    "subtitle": "Nous sommes une équipe d'innovateurs dédiés à la création de logiciels intelligents et centrés sur l'utilisateur pour un public mondial.",
+    "mission": {
+      "title": "Notre Mission",
+      "text": "Donner aux organisations des outils numériques évolutifs, intuitifs et multilingues qui rationalisent les processus complexes et favorisent la croissance. Nous pensons que la technologie doit être un atout accessible, permettant à nos clients de se concentrer sur ce qu'ils font le mieux."
+    },
+    "vision": {
+      "title": "Notre Vision",
+      "text": "Être un leader mondial des solutions logicielles spécialisées, reconnu pour notre engagement envers l'innovation, la qualité et la réussite de nos clients. Nous envisageons un avenir où nos produits créeront des possibilités illimitées pour les entreprises et les institutions du monde entier."
+    },
+    "values": {
+      "title": "Nos Valeurs",
+      "customerCentric": {
+        "title": "Centré sur le client",
+        "text": "Nous réussissons lorsque nos clients réussissent."
+      },
+      "innovation": {
+        "title": "Innovation",
+        "text": "Nous explorons continuellement de nouvelles technologies pour résoudre d'anciens problèmes."
+      },
+      "integrity": {
+        "title": "Intégrité",
+        "text": "Nous bâtissons la confiance par la transparence et la qualité."
+      },
+      "globalMindset": {
+        "title": "Mentalité globale",
+        "text": "Nous concevons pour un monde diversifié et interconnecté."
+      }
+    }
+  },
+  "contact": {
+    "title": "Contactez-nous",
+    "subtitle": "Vous avez une question ou souhaitez collaborer ? Remplissez le formulaire et nous vous répondrons dans les plus brefs délais.",
+    "form": {
+      "title": "Envoyez-nous un message",
+      "description": "Nous répondons généralement dans les 24 heures.",
+      "yourName": "Votre nom",
+      "yourEmail": "Votre e-mail",
+      "subject": "Sujet",
+      "yourMessage": "Votre message",
+      "sendMessage": "Envoyer le message"
+    },
+    "toast": {
+      "success": {
+        "title": "Succès !"
+      },
+      "error": {
+        "title": "Erreur"
+      }
+    }
+  },
+  "portal": {
+    "title": "Portail des parents",
+    "description": "Accès sécurisé aux informations de votre enfant.",
+    "message": "Vous êtes redirigé vers notre portail parents sécurisé. Veuillez utiliser vos identifiants fournis pour vous connecter.",
+    "button": "Accéder à la connexion sécurisée"
+  }
+}

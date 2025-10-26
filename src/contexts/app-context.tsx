@@ -1,9 +1,14 @@
 "use client";
 
-import { createContext, useState, useEffect, useMemo, type ReactNode } from 'react';
+import { createContext, useState, useEffect, useMemo, type ReactNode, useCallback } from 'react';
 import type { Language, Currency } from '@/types';
+import en from '@/locales/en.json';
+import fr from '@/locales/fr.json';
+import ar from '@/locales/ar.json';
 
 type Theme = "light" | "dark" | "system";
+
+const translations = { en, fr, ar };
 
 interface AppContextType {
   theme: Theme;
@@ -12,6 +17,7 @@ interface AppContextType {
   setLanguage: (language: Language) => void;
   currency: Currency;
   setCurrency: (currency: Currency) => void;
+  t: (key: string) => string;
 }
 
 export const AppContext = createContext<AppContextType | undefined>(undefined);
@@ -76,6 +82,23 @@ export function AppProvider({ children }: { children: ReactNode }) {
      setThemeState(t);
   }
 
+  const t = useCallback((key: string): string => {
+    const keys = key.split('.');
+    let result: any = translations[language];
+    for (const k of keys) {
+      result = result?.[k];
+      if (result === undefined) {
+        // Fallback to English if translation is missing
+        let fallbackResult: any = translations.en;
+        for (const fk of keys) {
+          fallbackResult = fallbackResult?.[fk];
+        }
+        return fallbackResult || key;
+      }
+    }
+    return result || key;
+  }, [language]);
+
   const value = useMemo(() => ({
     theme,
     setTheme,
@@ -83,7 +106,12 @@ export function AppProvider({ children }: { children: ReactNode }) {
     setLanguage,
     currency,
     setCurrency,
-  }), [theme, language, currency]);
+    t
+  }), [theme, language, currency, t]);
+
+  if (!isMounted) {
+    return null;
+  }
 
   return <AppContext.Provider value={value}>{children}</AppContext.Provider>;
 }

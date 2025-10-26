@@ -11,9 +11,11 @@ import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { ThemeToggle } from "@/components/shared/theme-toggle";
 import { LanguageSwitcher } from "@/components/shared/language-switcher";
 import { CurrencySwitcher } from "@/components/shared/currency-switcher";
+import { useApp } from "@/hooks/use-app";
 
 export function Header() {
   const pathname = usePathname();
+  const { t } = useApp();
 
   const navItems = NAV_LINKS.map((link) => (
     <Link
@@ -24,7 +26,7 @@ export function Header() {
         pathname === link.href ? "text-primary font-semibold" : "text-muted-foreground"
       )}
     >
-      {link.label}
+      {t(link.label)}
     </Link>
   ));
 
@@ -40,7 +42,7 @@ export function Header() {
             <SheetTrigger asChild>
               <Button variant="ghost" size="icon">
                 <Menu className="h-6 w-6" />
-                <span className="sr-only">Toggle Menu</span>
+                <span className="sr-only">{t('header.toggleMenu')}</span>
               </Button>
             </SheetTrigger>
             <SheetContent side="left" className="w-[300px]">
@@ -65,7 +67,7 @@ export function Header() {
             <LanguageSwitcher />
             <ThemeToggle />
             <Button asChild className="ml-2 hidden lg:inline-flex">
-              <Link href="/portal">Portal Login</Link>
+              <Link href="/portal">{t('header.portalLogin')}</Link>
             </Button>
           </div>
         </div>

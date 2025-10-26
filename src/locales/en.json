@@ -1,0 +1,240 @@
+
+{
+  "nav": {
+    "home": "Home",
+    "products": "Products",
+    "pricing": "Pricing",
+    "faq": "FAQ",
+    "about": "About",
+    "contact": "Contact"
+  },
+  "header": {
+    "toggleMenu": "Toggle Menu",
+    "portalLogin": "Portal Login",
+    "changeLanguage": "Change language",
+    "toggleTheme": "Toggle theme"
+  },
+  "theme": {
+    "light": "Light",
+    "dark": "Dark",
+    "system": "System"
+  },
+  "footer": {
+    "tagline": "Limitless Possibilities, Intelligently Delivered.",
+    "quickLinks": "Quick Links",
+    "legal": "Legal",
+    "privacyPolicy": "Privacy Policy",
+    "termsOfService": "Terms of Service",
+    "connectWithUs": "Connect With Us",
+    "copyright": "Infynia. All rights reserved."
+  },
+  "home": {
+    "hero": {
+      "title": "Infynia: Limitless Possibilities, <span class=\"block text-primary\">Intelligently Delivered.</span>",
+      "subtitle": "Modern, multilingual, and user-friendly solutions designed to scale with your ambitions. From school administration to practice management, Infynia is your partner in growth.",
+      "getStarted": "Get Started",
+      "seePricing": "See Pricing"
+    },
+    "products": {
+      "title": "Our Flagship Products",
+      "subtitle": "Powerful, intuitive, and ready to integrate into your workflow.",
+      "exploreAll": "Explore All Products →"
+    },
+    "features": {
+      "title": "Designed for a Global Audience",
+      "subtitle": "We build with flexibility and user experience at the core of everything we do."
+    }
+  },
+  "products": {
+    "inscription": {
+      "title": "Inscription & FAQ",
+      "description": "A streamlined school registration system with an integrated, intelligent FAQ module."
+    },
+    "parentPortal": {
+      "title": "Parent Portal",
+      "description": "Keep parents informed with real-time updates on attendance, notes, and school announcements."
+    },
+    "dentistBooking": {
+      "title": "Dentist Booking",
+      "description": "Effortless appointment scheduling for dental clinics with Google Calendar integration."
+    },
+    "inscriptionFaq": {
+      "title": "Inscription & FAQ",
+      "description": "A streamlined school registration system designed for efficiency and ease of use. Our platform simplifies the enrollment process for administrators, parents, and students. It features an intelligent, AI-powered FAQ module that learns from user interactions to provide instant, accurate answers, reducing administrative workload."
+    }
+  },
+  "features": {
+    "multilingual": {
+      "name": "Multilingual Support",
+      "description": "Engage with a global audience with seamless translations in English, French, and Arabic."
+    },
+    "darkLight": {
+      "name": "Dark & Light Modes",
+      "description": "A comfortable viewing experience, day or night, with a user-friendly theme toggle."
+    },
+    "currency": {
+      "name": "Currency Switcher",
+      "description": "Display pricing in USD, MAD, or EUR to cater to your international client base."
+    },
+    "customizable": {
+      "name": "Fully Customizable",
+      "description": "Tailor every aspect of our solutions to fit the unique needs of your organization."
+    }
+  },
+  "productsPage": {
+    "title": "Our Solutions",
+    "subtitle": "Discover our suite of intelligent, scalable, and user-centric products designed to solve real-world challenges.",
+    "viewPricing": "View Pricing",
+    "contactOnWhatsApp": "Contact on WhatsApp",
+    "comingSoon": {
+      "title": "Coming Soon",
+      "description": "Innovation never stops at Infynia. We are constantly developing new tools to empower our clients. Here's a sneak peek at what's next."
+    }
+  },
+  "upcomingProducts": {
+    "aiTutoring": {
+      "title": "AI Tutoring Platform",
+      "description": "Personalized learning paths and adaptive assessments for students."
+    },
+    "ecommerceSuite": {
+      "title": "E-commerce Suite",
+      "description": "A complete toolkit for building and scaling online stores."
+    }
+  },
+  "pricing": {
+    "title": "Flexible Pricing for Every Need",
+    "subtitle": "Choose the plan that's right for you. All prices are shown in",
+    "bestValue": "Best Value",
+    "oneTimeSetup": "one-time setup",
+    "perYear": "per year",
+    "perMonth": "per month",
+    "getStarted": "Get Started",
+    "customPlan": {
+      "title": "Need a custom plan?",
+      "description": "We can create a tailored package to fit your unique requirements. Contact us for a personalized quote.",
+      "button": "Contact Sales"
+    },
+    "plans": {
+      "parentPortal": {
+        "name": "Parent Portal",
+        "description": "Perfect for starting with our parent portal solution."
+      },
+      "inscriptionFaq": {
+        "name": "Inscription & FAQ",
+        "description": "Perfect for starting with our inscription & faq solution."
+      },
+      "schoolBundle": {
+        "name": "School Bundle",
+        "description": "The complete solution for educational institutions."
+      },
+      "dentistBooking": {
+        "name": "Dentist Booking",
+        "description": "Perfect for starting with our dentist booking solution."
+      }
+    },
+    "features": {
+      "attendance": "Attendance Tracking",
+      "grades": "Grades & Notes",
+      "announcements": "School Announcements",
+      "messaging": "Secure Messaging",
+      "registration": "Online Registration Forms",
+      "upload": "Document Upload",
+      "aiFaq": "AI-Powered FAQ",
+      "payment": "Payment Integration",
+      "allParentPortal": "All Parent Portal features",
+      "allInscriptionFaq": "All Inscription & FAQ features",
+      "prioritySupport": "Priority Support",
+      "accountManager": "Dedicated Account Manager",
+      "onlineBooking": "Online Appointment Booking",
+      "googleCalendar": "Google Calendar Sync",
+      "reminders": "Automated Reminders",
+      "patientManagement": "Patient Management"
+    }
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "subtitle": "Find answers to common questions about Infynia.",
+    "whatIs": {
+      "question": "What is Infynia?",
+      "answer": "Infynia is an AI-powered automation agency that helps individuals and businesses streamline their workflows. We design smart systems that take care of repetitive tasks, so you can focus on creating, innovating, and growing."
+    },
+    "whatDoes": {
+      "question": "What does Infynia do?",
+      "answer": "We build custom automation solutions that connect your tools, organize your processes, and reduce manual work. Whether it’s managing data, handling communication, or simplifying operations, Infynia makes your workflow run smoothly in the background."
+    },
+    "whoBenefits": {
+      "question": "Who can benefit from Infynia?",
+      "answer": "- Entrepreneurs who want to save time and scale their projects\n- Small businesses looking to boost efficiency without hiring extra staff\n- Creators & freelancers who want to focus on their craft instead of admin work\n- Teams that need better collaboration and less repetitive busywork"
+    },
+    "howHelp": {
+      "question": "How does Infynia help me “make something great”?",
+      "answer": "By removing the friction of repetitive tasks, Infynia frees up your energy for what really matters — building, innovating, and achieving your goals. We believe automation isn’t just about efficiency; it’s about unlocking your potential."
+    },
+    "techSkills": {
+      "question": "Do I need technical skills to use Infynia?",
+      "answer": "Not at all. We handle the technical setup and design everything to be user-friendly. You’ll simply enjoy the benefits of a system that works for you, not the other way around."
+    },
+    "whyChoose": {
+      "question": "Why choose Infynia?",
+      "answer": "- Tailored automation built around your needs\n- AI-driven solutions that adapt and scale with you\n- More time, less stress, and greater impact"
+    }
+  },
+  "about": {
+    "title": "About Infynia",
+    "subtitle": "We are a team of innovators dedicated to building intelligent, user-centric software for a global audience.",
+    "mission": {
+      "title": "Our Mission",
+      "text": "To empower organizations with scalable, intuitive, and multilingual digital tools that streamline complex processes and foster growth. We believe that technology should be an accessible asset, enabling our clients to focus on what they do best."
+    },
+    "vision": {
+      "title": "Our Vision",
+      "text": "To be a global leader in specialized software solutions, known for our commitment to innovation, quality, and customer success. We envision a future where our products create limitless possibilities for businesses and institutions worldwide."
+    },
+    "values": {
+      "title": "Our Values",
+      "customerCentric": {
+        "title": "Customer-Centric",
+        "text": "We succeed when our customers succeed."
+      },
+      "innovation": {
+        "title": "Innovation",
+        "text": "We continuously explore new technologies to solve old problems."
+      },
+      "integrity": {
+        "title": "Integrity",
+        "text": "We build trust through transparency and quality."
+      },
+      "globalMindset": {
+        "title": "Global-Mindset",
+        "text": "We design for a diverse, interconnected world."
+      }
+    }
+  },
+  "contact": {
+    "title": "Get in Touch",
+    "subtitle": "Have a question or want to work together? Fill out the form, and we'll get back to you as soon as possible.",
+    "form": {
+      "title": "Send us a message",
+      "description": "We typically respond within 24 hours.",
+      "yourName": "Your Name",
+      "yourEmail": "Your Email",
+      "subject": "Subject",
+      "yourMessage": "Your Message",
+      "sendMessage": "Send Message"
+    },
+    "toast": {
+      "success": {
+        "title": "Success!"
+      },
+      "error": {
+        "title": "Error"
+      }
+    }
+  },
+  "portal": {
+    "title": "Parent Portal",
+    "description": "Secure access to your child's information.",
+    "message": "You are being redirected to our secure parent portal. Please use your provided credentials to log in.",
+    "button": "Proceed to Secure Login"
+  }
+}

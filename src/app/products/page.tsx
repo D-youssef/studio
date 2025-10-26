@@ -1,3 +1,5 @@
+"use client";
+
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { PRODUCTS, UPCOMING_PRODUCTS } from "@/lib/constants";
@@ -5,18 +7,20 @@ import { PlaceHolderImages } from "@/lib/placeholder-images";
 import Image from "next/image";
 import Link from "next/link";
 import { FaWhatsapp } from "react-icons/fa";
+import { useApp } from "@/hooks/use-app";
 
 export default function ProductsPage() {
   const futureBlueprintImage = PlaceHolderImages.find(img => img.id === '6');
+  const { t } = useApp();
 
   return (
     <div className="bg-background">
       <section className="py-20 md:py-28">
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center space-y-4 mb-16">
-            <h1 className="text-4xl md:text-5xl font-headline font-bold">Our Solutions</h1>
+            <h1 className="text-4xl md:text-5xl font-headline font-bold">{t('productsPage.title')}</h1>
             <p className="max-w-3xl mx-auto text-muted-foreground md:text-xl">
-              Discover our suite of intelligent, scalable, and user-centric products designed to solve real-world challenges.
+              {t('productsPage.subtitle')}
             </p>
           </div>
 
@@ -35,18 +39,18 @@ export default function ProductsPage() {
                   )}
                 </div>
                 <div className="space-y-4">
-                  <h2 className="text-3xl font-headline font-bold text-primary">{product.title}</h2>
+                  <h2 className="text-3xl font-headline font-bold text-primary">{t(product.title)}</h2>
                   <p className="text-muted-foreground leading-relaxed">
-                    {product.description}
+                    {t(product.description)}
                   </p>
                   <div className="flex gap-4 pt-4">
                     <Button asChild>
-                      <Link href="/pricing">View Pricing</Link>
+                      <Link href="/pricing">{t('productsPage.viewPricing')}</Link>
                     </Button>
                     <Button asChild variant="outline">
                       <a href="https://wa.me/212680546540" target="_blank" rel="noopener noreferrer">
                         <FaWhatsapp className="mr-2 h-5 w-5 text-[#25D366]" />
-                        Contact on WhatsApp
+                        {t('productsPage.contactOnWhatsApp')}
                       </a>
                     </Button>
                   </div>
@@ -61,15 +65,15 @@ export default function ProductsPage() {
         <div className="container mx-auto px-4 md:px-6">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="space-y-4">
-              <h2 className="text-3xl font-headline font-bold">Coming Soon</h2>
+              <h2 className="text-3xl font-headline font-bold">{t('productsPage.comingSoon.title')}</h2>
               <p className="text-muted-foreground">
-                Innovation never stops at Infynia. We are constantly developing new tools to empower our clients. Here&apos;s a sneak peek at what&apos;s next.
+                {t('productsPage.comingSoon.description')}
               </p>
               <div className="space-y-6 pt-4">
                 {UPCOMING_PRODUCTS.map((product) => (
                   <div key={product.title}>
-                    <h3 className="font-semibold text-lg font-headline">{product.title}</h3>
-                    <p className="text-sm text-muted-foreground">{product.description}</p>
+                    <h3 className="font-semibold text-lg font-headline">{t(product.title)}</h3>
+                    <p className="text-sm text-muted-foreground">{t(product.description)}</p>
                   </div>
                 ))}
               </div>

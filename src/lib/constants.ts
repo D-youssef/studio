@@ -2,43 +2,43 @@ import type { NavLink } from "@/types";
 import { PlaceHolderImages } from "./placeholder-images";
 
 export const NAV_LINKS: NavLink[] = [
-  { href: "/", label: "Home" },
-  { href: "/products", label: "Products" },
-  { href: "/pricing", label: "Pricing" },
-  { href: "/faq", label: "FAQ" },
-  { href: "/about", label: "About" },
-  { href: "/contact", label: "Contact" },
+  { href: "/", label: "nav.home" },
+  { href: "/products", label: "nav.products" },
+  { href: "/pricing", label: "nav.pricing" },
+  { href: "/faq", label: "nav.faq" },
+  { href: "/about", label: "nav.about" },
+  { href: "/contact", label: "nav.contact" },
 ];
 
 export const PRODUCTS = [
     {
         slug: "inscription-faq",
-        title: "Inscription & FAQ",
-        description: "A streamlined school registration system designed for efficiency and ease of use. Our platform simplifies the enrollment process for administrators, parents, and students. It features an intelligent, AI-powered FAQ module that learns from user interactions to provide instant, accurate answers, reducing administrative workload.",
+        title: "products.inscriptionFaq.title",
+        description: "products.inscriptionFaq.description",
         image: PlaceHolderImages.find(img => img.id === "2"),
     },
     {
         slug: "parent-portal",
-        title: "Parent Portal",
-        description: "A comprehensive portal that bridges the communication gap between school and home. Parents can access real-time information on their child's attendance, grades, assignments, and school announcements. Secure messaging and progress tracking tools foster a collaborative educational environment.",
+        title: "products.parentPortal.title",
+        description: "products.parentPortal.description",
         image: PlaceHolderImages.find(img => img.id === "3"),
     },
     {
         slug: "dentist-booking",
-        title: "Dentist Booking",
-        description: "An effortless appointment scheduling and management system for dental practices. Patients can book appointments online 24/7, receive automated reminders, and manage their bookings. The system integrates seamlessly with Google Calendar, helping to optimize the clinic's schedule and reduce no-shows.",
+        title: "products.dentistBooking.title",
+        description: "products.dentistBooking.description",
         image: PlaceHolderImages.find(img => img.id === "4"),
     },
 ];
 
 export const UPCOMING_PRODUCTS = [
     {
-        title: "AI Tutoring Platform",
-        description: "Personalized learning paths and adaptive assessments for students.",
+        title: "upcomingProducts.aiTutoring.title",
+        description: "upcomingProducts.aiTutoring.description",
     },
     {
-        title: "E-commerce Suite",
-        description: "A complete toolkit for building and scaling online stores.",
+        title: "upcomingProducts.ecommerceSuite.title",
+        description: "upcomingProducts.ecommerceSuite.description",
     },
 ];
 
@@ -50,58 +50,58 @@ export const CURRENCY_RATES = {
 
 export const PRICING_PLANS = {
   "parent-portal": {
-    name: "Parent Portal",
+    name: "pricing.plans.parentPortal.name",
+    description: "pricing.plans.parentPortal.description",
     setup: { min: 800, max: 1500 },
     monthly: { min: 100, max: 200 },
-    features: ["Attendance Tracking", "Grades & Notes", "School Announcements", "Secure Messaging"],
+    features: ["pricing.features.attendance", "pricing.features.grades", "pricing.features.announcements", "pricing.features.messaging"],
   },
   "inscription-faq": {
-    name: "Inscription & FAQ",
+    name: "pricing.plans.inscriptionFaq.name",
+    description: "pricing.plans.inscriptionFaq.description",
     yearly: { min: 500, max: 1000 },
     monthly: { min: 50, max: 100 },
-    features: ["Online Registration Forms", "Document Upload", "AI-Powered FAQ", "Payment Integration"],
+    features: ["pricing.features.registration", "pricing.features.upload", "pricing.features.aiFaq", "pricing.features.payment"],
   },
   "school-bundle": {
-    name: "School Bundle",
+    name: "pricing.plans.schoolBundle.name",
+    description: "pricing.plans.schoolBundle.description",
     yearly: { min: 2000, max: 2000 },
     monthly: { min: 150, max: 250 },
-    features: ["All Parent Portal features", "All Inscription & FAQ features", "Priority Support", "Dedicated Account Manager"],
+    features: ["pricing.features.allParentPortal", "pricing.features.allInscriptionFaq", "pricing.features.prioritySupport", "pricing.features.accountManager"],
   },
   "dentist-booking": {
-    name: "Dentist Booking",
+    name: "pricing.plans.dentistBooking.name",
+    description: "pricing.plans.dentistBooking.description",
     yearly: { min: 600, max: 1200 },
     monthly: { min: 50, max: 120 },
-    features: ["Online Appointment Booking", "Google Calendar Sync", "Automated Reminders", "Patient Management"],
+    features: ["pricing.features.onlineBooking", "pricing.features.googleCalendar", "pricing.features.reminders", "pricing.features.patientManagement"],
   },
 };
 
 export const FAQ_DATA = [
   {
-    question: "What is Infynia?",
-    answer: "Infynia is an AI-powered automation agency that helps individuals and businesses streamline their workflows. We design smart systems that take care of repetitive tasks, so you can focus on creating, innovating, and growing."
+    question: "faq.whatIs.question",
+    answer: "faq.whatIs.answer"
   },
   {
-    question: "What does Infynia do?",
-    answer: "We build custom automation solutions that connect your tools, organize your processes, and reduce manual work. Whether it’s managing data, handling communication, or simplifying operations, Infynia makes your workflow run smoothly in the background."
+    question: "faq.whatDoes.question",
+    answer: "faq.whatDoes.answer"
   },
   {
-    question: "Who can benefit from Infynia?",
-    answer: "- Entrepreneurs who want to save time and scale their projects\n- Small businesses looking to boost efficiency without hiring extra staff\n- Creators & freelancers who want to focus on their craft instead of admin work\n- Teams that need better collaboration and less repetitive busywork"
+    question: "faq.whoBenefits.question",
+    answer: "faq.whoBenefits.answer"
   },
   {
-    question: "How does Infynia help me “make something great”?",
-    answer: "By removing the friction of repetitive tasks, Infynia frees up your energy for what really matters — building, innovating, and achieving your goals. We believe automation isn’t just about efficiency; it’s about unlocking your potential."
+    question: "faq.howHelp.question",
+    answer: "faq.howHelp.answer"
   },
   {
-    question: "Do I need technical skills to use Infynia?",
-    answer: "Not at all. We handle the technical setup and design everything to be user-friendly. You’ll simply enjoy the benefits of a system that works for you, not the other way around."
+    question: "faq.techSkills.question",
+    answer: "faq.techSkills.answer"
   },
   {
-    question: "Why choose Infynia?",
-    answer: "- Tailored automation built around your needs\n- AI-driven solutions that adapt and scale with you\n- More time, less stress, and greater impact"
+    question: "faq.whyChoose.question",
+    answer: "faq.whyChoose.answer"
   }
 ];
-
-export const FAQ_CATEGORIES = {
-  General: FAQ_DATA
-};
