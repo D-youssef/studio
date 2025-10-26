@@ -5,12 +5,11 @@
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
-import { CheckCircle2, Languages, Palette, DollarSign, Target, Eye, Sparkles, HandHeart, ShieldCheck, Combine, Lightbulb, BrainCircuit } from 'lucide-react';
+import { Target, Eye, Sparkles, HandHeart, ShieldCheck, Combine, BrainCircuit } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useApp } from '@/hooks/use-app';
 import { AnimatedOnScroll } from '@/components/shared/animated-on-scroll';
-import { ParticlesBackground } from '@/components/shared/particles-background';
 
 const products = [
   {
@@ -84,8 +83,7 @@ export default function Home() {
 
   return (
     <div className="flex flex-col">
-      <section className="relative w-full py-20 md:py-32 lg:py-40 bg-card overflow-hidden">
-        <ParticlesBackground />
+      <section className="relative w-full py-20 md:py-32 lg:py-40 overflow-hidden bg-card/50">
         <div className="container mx-auto px-4 md:px-6 relative z-10">
           <div className="grid md:grid-cols-2 gap-8 items-center">
             <AnimatedOnScroll animationName="animate__fadeInLeft">

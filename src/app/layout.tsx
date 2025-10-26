@@ -5,10 +5,14 @@ import { Header } from '@/components/layout/header';
 import { Footer } from '@/components/layout/footer';
 import { Toaster } from '@/components/ui/toaster';
 import { cn } from '@/lib/utils';
+import { ParticlesBackground } from '@/components/shared/particles-background';
 
 export const metadata: Metadata = {
   title: 'Infynia | Limitless Possibilities',
   description: 'Infynia offers modern, scalable solutions including school registration, parent portals, and dentist booking systems.',
+  icons: {
+    icon: '/favicon.svg',
+  }
 };
 
 export default function RootLayout({
@@ -25,9 +29,14 @@ export default function RootLayout({
       </head>
       <body className={cn('font-body antialiased min-h-screen flex flex-col')}>
         <AppProvider>
-          <Header />
-          <main className="flex-grow">{children}</main>
-          <Footer />
+          <div className="relative flex flex-col min-h-screen">
+            <ParticlesBackground />
+            <div className="relative z-10 flex flex-col flex-grow">
+              <Header />
+              <main className="flex-grow">{children}</main>
+              <Footer />
+            </div>
+          </div>
           <Toaster />
         </AppProvider>
       </body>
