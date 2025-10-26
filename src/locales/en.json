@@ -30,7 +30,10 @@
   },
   "home": {
     "hero": {
-      "title": "Infynia: Limitless Possibilities, <span class=\"block text-primary\">Intelligently Delivered.</span>",
+      "title": {
+        "part1": ": Limitless Possibilities, ",
+        "part2": "Intelligently Delivered."
+      },
       "subtitle": "We create smart automations that handle the busywork, so you can focus on building, innovating, and growing. Infynia streamlines your workflow, connects your tools, and unlocks more time for what truly matters.",
       "getStarted": "Get Started",
       "seePricing": "See Pricing"
@@ -238,5 +241,3 @@
     "button": "Proceed to Secure Login"
   }
 }
-
-    

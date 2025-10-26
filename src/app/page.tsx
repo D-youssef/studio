@@ -65,9 +65,11 @@ export default function Home() {
         <div className="container mx-auto px-4 md:px-6">
           <div className="grid md:grid-cols-2 gap-8 items-center">
             <div className="space-y-6 text-center md:text-left">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-headline font-bold tracking-tighter"
-                dangerouslySetInnerHTML={{ __html: t('home.hero.title') }}
-              />
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-headline font-bold tracking-tighter">
+                <span className="animate-text-shimmer bg-[linear-gradient(110deg,#334155,45%,#93c5fd,55%,#334155)] bg-[length:250%_100%] bg-clip-text text-transparent">
+                  Infynia
+                </span>{t('home.hero.title.part1')}<span className="block text-primary">{t('home.hero.title.part2')}</span>
+              </h1>
               <p className="max-w-xl mx-auto md:mx-0 text-muted-foreground md:text-xl">
                 {t('home.hero.subtitle')}
               </p>
