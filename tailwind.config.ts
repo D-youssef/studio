@@ -103,13 +103,30 @@ export default {
             'background-position': '-200% 0',
           },
         },
+        'spin-float': {
+          '0%, 100%': {
+            transform: 'translateY(0) rotate(0deg)',
+          },
+          '25%': {
+            transform: 'translateY(-5px) rotate(90deg)',
+          },
+          '50%': {
+            transform: 'translateY(0) rotate(180deg)',
+          },
+          '75%': {
+            transform: 'translateY(5px) rotate(270deg)',
+          }
+        },
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
         'text-shimmer': 'text-shimmer 3s linear infinite',
+        'spin-float': 'spin-float 4s ease-in-out infinite',
       },
     },
   },
   plugins: [require('tailwindcss-animate')],
 } satisfies Config;
+
+    
