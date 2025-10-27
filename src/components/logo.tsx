@@ -12,6 +12,7 @@ const InfinityIcon = (props: React.SVGProps<SVGSVGElement>) => (
     strokeWidth="2"
     strokeLinecap="round"
     strokeLinejoin="round"
+    className="h-6 w-6 text-primary animate-spin-float"
   >
     <path d="M12 12c-2-2.67-4-4-6-4a4 4 0 1 0 0 8c2 0 4-1.33 6-4zm0 0c2 2.67 4 4 6 4a4 4 0 1 0 0-8c-2 0-4 1.33-6 4z" />
   </svg>
@@ -20,7 +21,7 @@ const InfinityIcon = (props: React.SVGProps<SVGSVGElement>) => (
 export function Logo() {
   return (
     <Link href="/" className="flex items-center gap-2" prefetch={false}>
-      <InfinityIcon className="h-6 w-6 text-primary" />
+      <InfinityIcon />
       <span className="text-xl font-bold font-headline">Infynia</span>
     </Link>
   );
