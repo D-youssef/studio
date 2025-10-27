@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   title: 'Infynia | Limitless Possibilities',
   description: 'Infynia offers modern, scalable solutions including school registration, parent portals, and dentist booking systems.',
   icons: {
-    icon: '/favicon.svg',
+    icon: '/infinity-logo.svg',
   }
 };
 
